@@ -1,0 +1,47 @@
+/* Подключаем стили обнуления */
+@import url("reset.css");
+/* Основные стили */
+
+h1,
+a {
+	color: pink;
+}
+h2 {
+	color: darkblue;
+}
+.item > a {
+	color: aqua;
+}
+.text ~ p {
+	color: brown;
+}
+#news-1 {
+	color: yellow;
+}
+.box-news-1 p {
+	color: darkorchid;
+}
+p.text-green,
+.link.text-green {
+	color: green;
+}
+.box-news-1 span,
+.text-grey {
+	color: grey;
+}
+.text-red,
+p.text-red {
+	color: red;
+}
+p.text-blue {
+	color: blue;
+}
+p.text-yellowgreen {
+	color: yellowgreen;
+}
+.box-news-2 > p {
+	color: darkgoldenrod;
+} 
+.minibox-news-2 + p {
+	color: darkolivegreen;
+}
