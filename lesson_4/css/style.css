@@ -1,6 +1,6 @@
 /* Подключаем шрифты Google Fonts */
 @import url("https://fonts.googleapis.com/css?family=Comic+Neue:300,300italic,regular,italic,700,700italic&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 /* Локальное подключение шрифтов */
 @import url("fonts.css");
 /* Подключаем стили обнуления */
@@ -8,7 +8,7 @@
 
 /* Основные стили */
 body {
-	"Proxima Nova", sans-serif;
+	font-family: "Proxima Nova", sans-serif;
 }
 
 h1 {
