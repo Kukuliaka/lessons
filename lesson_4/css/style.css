@@ -7,11 +7,10 @@
 @import url("reset.css");
 
 /* Основные стили */
-h1,
-h2,
-h3 {
-	font-family: "Proxima Nova", sans-serif;
+body {
+	"Proxima Nova", sans-serif;
 }
+
 h1 {
 	font-size: 48px;
 	text-decoration: underline double green;
