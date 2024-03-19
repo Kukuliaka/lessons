@@ -5,9 +5,8 @@
 @import url("fonts.css");
 /* Подключаем стили обнуления */
 @import url("reset.css");
+
 /* Основные стили */
-
-
 h1,
 h2,
 h3 {
