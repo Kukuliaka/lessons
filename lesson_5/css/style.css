@@ -93,24 +93,28 @@ body {
 .container-layot-2 {
 	max-width: 1100px;
 	margin: 0 auto;
-	padding: 50px 15px 30px 15px;
+	padding: 70px 15px 30px 15px;
 }
 .img {
 	width: 100%;
-	margin: 50px 0px 40px 0px;
+	margin: 0px 0px 40px 0px;
 }
 .subtitle {
 	font-size: 40px;
 	line-height: 1.2;
+	margin: 0px 0px 40px 0px;
 }
 .content-text {
 	font-size: 16px;
 	line-height: 1.875;
 }
+.under-content-text {
+	margin: 0px 0px 30px 0px;
+}
 h3.label {
 	font-size: 20px;
 	line-height: 1.4;
-	margin: 30px 0px;
+	margin: 0px 0px 30px 0px;
 }
 p {
 	margin: 0px 0px 10px 0px;
@@ -119,12 +123,14 @@ p {
 	margin: 0px 0px 10px 0px;
 }
 .link-2 {
-	padding: 0px 0px 20px 47px;
+	padding: 0px 0px 0px 47px;
+	margin: 0px 0px 20px 0px;
 }
 /* ============= Макет №3 ================== */
-
-.container-layot-3 {
+.layot-3 {
 	background:  #f8f8f8;
+}
+.container-layot-3 {
 	max-width: 1320px;
 	margin: 0 auto;
 	padding: 70px 15px;
@@ -151,7 +157,7 @@ span {
 .item {
 	text-align: center;
 }
-img {
+.icon {
 	margin: 0px 0px 20px 0px;
 }
 .name {
