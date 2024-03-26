@@ -138,6 +138,7 @@
 .img {
 	width: 100%;
 	margin: 0px 0px 40px 0px;
+	border-radius: 8px;
 }
 .subtitle {
 	font-size: 40px;
@@ -194,10 +195,10 @@ p {
 	display: inline-block;
 	max-width: 50%;
 	padding: 0px 60px;
-	vertical-align: top;
+	vertical-align: middle;
 }
 .block-content {
-	padding:101px 10px 0px;
+	padding: 20px 10px 0px;
 }
 .block-title {
 	font-size: 40px;
@@ -230,7 +231,7 @@ p {
 /* ------------------------ Макет №3 ------------------- */
 
 .layot-3 {
-	background:	url("../img/branch.svg") left 90% no-repeat,
+	background:	url("../img/branch.svg") left bottom 20% no-repeat,
 	url("../img/branch_2.svg") right no-repeat,
 	rgba(30, 40, 50, 0.05);
 	font-family: "Roboto",sans-serif;
