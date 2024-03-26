@@ -15,14 +15,15 @@
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 24px;
-	margin: 0px 0px 35px 0px;
+	background: #ec9c2c;
+}
+.header__container {
+	margin: 0px auto 35px ;
+	padding: 20px 0px;
 }
 .header-title {
 	font-size: 38px;
-	margin: 0px 0px 30px 0px;
-	padding: 20px 0px;
 	font-weight: 700;
-	background: #ec9c2c;
 	text-shadow: 10px 10px 5px #796969;
 }
 .header-list > li {
