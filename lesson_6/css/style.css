@@ -140,7 +140,10 @@
 }
 .img {
 	width: 100%;
-	margin: 0px 0px 40px 0px;
+	margin: 0px 0px 30px 0px;
+}
+.img img {
+	width: 100%;
 	border-radius: 8px;
 }
 .subtitle {
@@ -169,7 +172,7 @@ p {
 .list-text {
 	padding: 0px 0px 0px 47px;
 	margin: 0px 0px 20px 0px;
-	background: url("../img/icons/icon.png") 0 2px no-repeat;
+	background: url("../img/icons/icon.png") 0 2px / 30px 30px no-repeat;
 	min-height: 30px;
 }
 
@@ -224,6 +227,7 @@ p {
 	border-radius: 8px;
 }
 .button span {
+	display: inline-block;
 	background: url("../img/icons/icon_button.png") 0 1px / 20px 20px no-repeat;
 	padding: 0px 0px 0px 25px;
 }
@@ -277,7 +281,8 @@ p {
 	padding: 19px 26px 19px 26px;
 }
 .item-button span {
-	background: url("../img/icons/icon_shop.png") 0 0 no-repeat;
+	display: inline-block;
+	background: url("../img/icons/icon_shop.png") 0 0 / 30px 30px no-repeat;
 	padding: 0px 0px 0px 38px;
 }
 .item-image {
