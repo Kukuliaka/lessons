@@ -1,0 +1,101 @@
+/* Подключаем шрифты Google */
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+/* Локальное подключение шрифтов */
+@import url("fonts.css");
+/* Подключаем стили обнуления */
+@import url("reset.css");
+
+/* Основные стили */
+
+/* -------------------------- Header -------------------- */
+body {
+	font-family: Exo, sans-serif;
+	font-size: 28px;
+	line-height: 1.2;
+}
+.header {
+	text-align: center;
+	text-transform: uppercase;
+	background: linear-gradient(90deg, rgba(251,219,6,1) 0%, rgba(2, 177, 246, 0.973) 100%);
+}
+.header__container {
+	margin: 0px auto;
+	padding: 40px 0px;
+}
+.header-title {
+	font-size: 38px;
+	font-weight: 700;
+	text-shadow: 10px 5px 5px #696c79;
+}
+
+/* ----------------------- main ------------------------- */
+main {
+	background: #eaf8d4;
+	min-height: 1000px;
+}
+.page-container {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 30px 0px;
+}
+.block {
+	padding: 40px;
+	width: 1300px;
+	min-height: 400px;
+	border: 3px solid #101515;
+	border-radius: 15px;
+	box-shadow: 10px 10px 20px 10px #696c79;
+}
+.block > div:not(:last-child) {
+	margin: 0px 0px 30px 0px;
+}
+.star {
+	background: url("../img/icons/star.svg") left / 20px 20px no-repeat;
+	padding: 0px 0px 0px 30px;
+}
+.percent {
+	background: url("../img/icons/percent.svg") left / 20px 20px no-repeat;
+	padding: 0px 0px 0px 30px;
+}
+.credit {
+	background: url("../img/icons/credit.svg") left / 20px 20px no-repeat;
+	padding: 0px 0px 0px 30px;
+}
+.arrow-down {
+	background: url("../img/icons/arrow_down.svg") left / 20px 20px no-repeat;
+	padding: 0px 0px 0px 30px;
+}
+.arrow-top {
+	background: url("../img/icons/arrow_top.svg") left / 20px 20px no-repeat;
+	padding: 0px 0px 0px 30px;
+}
+.block p,
+h2 {
+	font-size: 36px;
+}
+h2 {
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 0px 0px 30px 0px;
+}
+img{
+	vertical-align: middle;
+}
+.question {
+	background: url("../img/icons/question.svg") left / 20px 20px no-repeat;
+	padding: 0px 0px 0px 30px;
+}
+
+/* -------------------Footer------------- */
+.footer {
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	background: linear-gradient(90deg, rgba(2, 177, 246, 0.973) 0%, rgba(251,219,6,1) 100%);
+}
+.footer-container {
+	max-width: 1080px;
+	margin: 0 auto;
+	padding: 50px 0px;
+}
