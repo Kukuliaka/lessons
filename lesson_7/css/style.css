@@ -140,7 +140,7 @@
 
 .layot-1 {
 	color: #2b2929;
-	font-family: "Proxima Nova",sans-serif;
+	font-family: "Proxima Nova", sans-serif;
 }
 .container-layot-1 {
 	max-width: 1100px;
@@ -151,36 +151,33 @@
 	width: 100%;
 	margin: 0px 0px 30px 0px;
 }
-.img img {
-	width: 100%;
-	border-radius: 8px;
-}
 .subtitle {
 	font-size: 40px;
 	line-height: 1.2;
 	margin: 0px 0px 40px 0px;
 }
+.img img {
+	width: 100%;
+	border-radius: 8px;
+}
 .content {
 	padding: 10px 0px;
 	line-height: 1.875;
 }
-.content p:first-of-type {
-	margin: 0px 0px 10px 0px;;
+.content-block-text *:not(:last-child) {
+	margin: 0px 0px 10px 0px;
 }
-.content p:nth-child(2) {
-	margin: 0px 0px 40px 0px;;
+.content > *:not(:last-child) {
+	margin: 0px 0px 40px 0px;
 }
 .content h3 {
 	font-size: 20px;
 	line-height: 1.4;
-	margin: 0px 0px 30px 0px;
 }
 .list li {
 	background: url("../img/icons/icon.png") 0 4px / 30px 30px no-repeat;
 	padding: 0px 0px 0px 47px;
-}
-.list {
-	margin: 0px 0px 40px 0px;
+	min-height: 35px;
 }
 .list li:not(:last-child){
 	margin: 0px 0px 20px 0px;
@@ -209,19 +206,19 @@
 	font-weight: 700;
 	line-height: 1.16;
 	text-transform: uppercase;
-	margin: 0px 0px 10px 0px;
+	margin: 0px 0px 20px 0px;
 	display: inline-block;
 }
 .title-about::after {
 	content: "";
+	display: block;
 	width: 120%;
 	height: 1px;
-	margin-bottom: 30px;
+	margin: 20px 0px 0px 0px;
 	margin-left: -10%;
 	background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(66,255,0,1) 50%, rgba(36,0,255,1) 100%);
 }
 .text-about {
-	max-width: 990px;
 	font-size: 18px;
 	line-height: 2.22;
 	margin: 0px 0px 60px 0px;
@@ -230,21 +227,22 @@
 	font-family: Orbitron, sans-serif;
 	line-height: 1.25;
 	font-size: 0;
-	margin: 0px -15px 50px;
+	margin: 0px -15px 80px;
 }
-.list-about li {
-	text-align: left;
-}
-/* кaстылi */
 .list-about li:first-child {
-	margin: 0px 0px 0px -40px;
+	margin-left: -40px;
+}
+.list-about li:last-child {
+	margin: 0px -40px 0px 0px;
+	text-align: right;
 }
 .link-about {
 	display: inline-block;
-	width: 25%;
+	width: auto;
 	font-size: 20px;
 	text-align: left;
-	padding: 0px 15px;
+	margin: 0px 60px 0px 0px;
+	text-align: left;
 }
 .link-about:hover {
 	color: #bdbdbf;
@@ -256,8 +254,7 @@
 	height: 10px;
 	display: inline-block;
 	border-radius: 50%;
-	/*  не атрымалася прыгожа выраўняваць(( */
-	margin-left: 19%;
+	margin-left: 60px;
 }
 .list-contacts-about {
 	font-size: 0px;
