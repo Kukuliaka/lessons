@@ -19,11 +19,12 @@ body {
 	margin: 0 auto;
 }
 /* -------------------------- Header -------------------- */
-
+.wrapper__header {
+	position: sticky;
+}
 .header {
 	background-color: #fff;
 	padding: 25px 15px;
-	position: sticky;
 	top: 0;
 	left: 0;
 	z-index: 50;
@@ -242,4 +243,11 @@ body {
 .card__link:hover {
 	transform: scale(1.1);
 }
-
+.page__icon {
+	position: fixed;
+	bottom: 50px;
+	right: 20px;
+}
+.page__icon:hover {
+	transform: scale(1.2);
+}
