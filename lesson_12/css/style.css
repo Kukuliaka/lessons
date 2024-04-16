@@ -117,10 +117,10 @@ body {
 } 
 .crazy-bee {
 	width: 500px;
-	animation: crazy 10s linear infinite alternate forwards;
-}
+	animation: crazy 5s linear infinite alternate forwards;
+} 
 .crazy-bee img {
-	animation: crazy 2s linear infinite alternate  forwards;
+	animation: crazy 1s infinite alternate forwards;
 	left: 0;
 	top: 0;
 	width: 100px;
