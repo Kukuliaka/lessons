@@ -1,0 +1,467 @@
+/* Подключаем шрифты Google */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* Локальное подключение шрифтов */
+
+/* Подключаем стили обнуления */
+@import url("reset.css");
+/* Подключаем файл анимации */
+@import url("keys.css");
+/* Основные стили */
+body {
+	background: url("../img/bg_bee.webp") 0 0 fixed;
+	min-height: 800px;
+	font-family: "Ubuntu Mono", monospace;
+}
+[class*=__container] {
+	max-width: 1360px;
+	margin: 0 auto;
+	overflow: clip;
+}
+
+/* ----------------------header---------------------- */
+
+.header {
+	padding: 30px 0px 0px 0px;
+	animation: position 1.5s ;
+}
+.wrapper__header {
+	margin: 0px 0px 50px 0px;
+}
+.header__content {
+	border: 2px solid #7c7676;
+	border-radius: 8px;
+	background: #fbf3f3;
+	padding: 25px;
+	box-shadow: 5px 5px 5px #7c7676;
+}
+.header__title {
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 1.2;
+	text-align: center;
+	color:rgb(65, 51, 32);
+}
+
+/* --------------------------page------------------------ */
+
+.wrapper__page {
+	margin: 0px 0px 50px 0px;
+}
+.page__image img 	{
+	width: 100px;
+	position: absolute;
+	z-index: 20;
+}
+.page__image img:nth-child(even) {
+	right: 0;
+}
+.page__image img:nth-child(odd) {
+	transform: scale(-1, 1);
+	left: 0;
+}
+.page__image > img:first-child {
+	animation: bee-left-1 15s infinite alternate forwards;
+	top: 0;
+}
+.page__image img:nth-child(2) {
+	animation: bee-left-1 5s infinite reverse 1.5s;
+	top: 10%;
+}
+.page__image img:nth-child(3) {
+	animation: bee-left-3 12s linear infinite alternate 3s forwards;
+	top: 20%;
+}
+.page__image img:nth-child(4) {
+	animation: bee-left-4 10s linear infinite 1s forwards;
+	top: 30%;
+}
+.page__image img:nth-child(5) {
+	animation: bee-left-4 7s linear infinite forwards;
+	top: 30%;
+}
+.page__image img:nth-child(6) {
+	animation: bee-left-6 11s linear infinite 2s forwards;
+	top: 60%;
+}
+.page__image img:nth-child(7) {
+	animation: bee-left-7 11s linear infinite 2s forwards;
+	top: 70%;
+}
+.page__image img:nth-child(8) {
+	animation: bee-left-8 8s linear infinite 3s forwards;
+	top: 80%;
+}
+.page__picture img {
+	width: 150px;
+	position: absolute;
+	top: 0;
+	left: 50px;
+	z-index: 3;
+	transform: translate(0, 0);
+	animation: position 4s;
+}
+
+/* -------------------------car------------------------ */
+
+.page__car {
+	border: 2px solid #7c7676;
+	border-radius: 8px;
+	background: #fefefe;
+	padding: 100px 25px 25px 25px;
+	box-shadow: 5px 5px 5px #7c7676;
+	min-height: 800px;
+	background: url("../img/beekeep.webp") 0 0 no-repeat;
+	position: relative;
+	overflow: hidden;
+	margin: 0px 0px 50px 0px;
+} 
+.crazy-bee {
+	width: 500px;
+	animation: crazy 10s linear infinite alternate forwards;
+}
+.crazy-bee img {
+	animation: crazy 2s linear infinite alternate  forwards;
+	left: 0;
+	top: 0;
+	width: 100px;
+	position: absolute;
+	z-index: 20;
+}
+.page__car::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: transform 1s;
+	animation: hide 4s;
+}
+.page__content {
+	padding: 20px;
+}
+.car {
+	position: relative;
+	animation: position-right 5s cubic-bezier(1.000, -0.600, 0.370, 1.650) infinite;
+}
+.car__main {
+	position: absolute;
+	top: 200px;
+	left: 350px;
+	width: 650px;
+	height: 320px;
+	border-radius: 42% 58% 100% 0% / 94% 100% 0% 6%;
+	background: #f5e507;
+}
+.car__wings {
+	position: relative;
+}
+.car__wing {
+	width: 180px;
+	height: 250px;
+	border: 2px solid #bc7604;
+	border-radius: 77% 23% 100% 0% / 100% 14% 86% 0% ;
+	background: linear-gradient(93deg, rgba(2,228,255,1) 0%, rgba(255,255,255,1) 100%);
+	position: absolute;
+	z-index: 6;
+	top: -240px;
+	left: 50%;
+	transform-origin: 0 bottom;
+}
+.car__wing--left {
+	animation: wing-left 0.15s linear infinite;
+}
+.car__wing--right {
+	animation: wing-left 0.1s linear infinite ;
+	transform: rotate(25deg);
+}
+.car__antenna {
+	position: absolute;
+	left: 250px;
+	top: -55px;
+}
+.antenna__top {
+	width: 4px;
+	height: 80px;
+	border-radius: 10px;
+	background: #000;
+	transform: rotate(55deg);
+}
+.antenna__down {
+	width: 12px;
+	height: 8px;
+	border-radius: 50%;
+	background: #000;
+	position: absolute;
+	right: 28px;
+	bottom: 12px;
+}
+.car__light-back {
+	width: 40px;
+	height: 60px;
+	border-radius: 50%;
+	border: 3px solid #2c2315;
+	background: #cf0606;
+	position: absolute;
+	bottom: 70px;
+	right: 18px;
+	z-index: 10	;
+	transform: rotate(-40deg);
+}
+.car__front {
+	position: absolute;
+	top: 340px;
+	left: 180px;
+	width: 240px;
+	height: 180px;
+	border-radius: 100% 0% 100% 0% / 91% 100% 0% 9% ;
+	background: #f5e507;
+	z-index: 3;
+}
+.car__light-front {
+	width: 50px;
+	height: 80px;
+	border-radius: 50%;
+	border: 3px solid #2c2315;
+	background: #dff3a8;
+	position: absolute;
+	bottom: 55px;
+	left: 50px;
+	z-index: 10	;
+	transform: rotate(60deg);
+}
+.car__down {
+	position: absolute;
+	top: 520px;
+	left: 155px;
+	width: 870px;
+	height: 30px;
+	background: #bc7604;
+	border-radius: 0 0 10px 10px;
+}
+.car__down::before {
+	content: "";
+	width: 200px;
+	height: 60px;
+	background: #bc7604;
+	border-radius: 40px 0 0 10px;
+	position: absolute;
+	z-index: 5;
+	left: 0;
+	top: -50px;
+}
+.car__down::after {
+	content: "";
+	width: 120px;
+	height: 60px;
+	background: #bc7604;
+	border-radius: 0 40px 0 10px;
+	position: absolute;
+	z-index: 5;
+	right: 0;
+	top: -50px;
+}
+.car__door {
+	width: 2px;
+	height: 300px;
+	background: #bc7604;
+	position: absolute;
+	top: 220px;
+	left: 680px;
+}
+.car__door span {
+	width: 40px;
+	height: 10px;
+	border-radius: 8px;
+	background: #bc7604;
+	position: absolute;
+	top: 170px;
+	left: -50px;
+	z-index: 5;
+}
+.car__window {
+	background: linear-gradient(93deg, rgba(2,228,255,1) 0%, rgba(255,255,255,1) 100%);
+	border: 2px solid #bc7604;
+}
+.car__window--side-front {
+	width: 220px;
+	height: 130px;
+	border-radius: 0% 100% 99% 1% / 100% 100% 0% 0% ;
+	position: absolute;
+	top: 4px;
+	left: -230px;
+	transform: scale(-1, 1);
+}
+.car__window--front {
+	width: 25px;
+	height: 140px;
+	border-radius: 100% 0% 99% 1% / 100% 100% 0% 0% ;
+	position: absolute;
+	top: 3px;
+	left: -255px;
+	transform: rotate(36deg);
+	border-left: none;
+}
+.car__window--back {
+	width: 19px;
+	height: 150px;
+	border-radius: 0% 100% 0% 100% / 100% 64% 36% 0% ;
+	position: absolute;
+	top: 0;
+	left: 188px;
+	border-right: none;
+	border-bottom: none;
+	transform: rotate(-46deg);
+}
+.car__window--side-back{
+	margin: 4px 0px 0px 10px;
+	width: 170px;
+	height: 130px;
+	border-radius: 0% 100% 99% 1% / 100% 100% 0% 0% ;
+}
+.car__window--side-back::after {
+	content: "";
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 121px;
+	left: 208px;
+	background: #f5e507;
+	z-index: 5;
+}
+.car__wheels {
+	height: 150px;
+	position: relative;
+	top: 430px;
+}
+.car__wheel {
+	animation: rotate 3s linear infinite;
+	border: 30px solid #000;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	outline: 5px dashed #0e0e0e;
+	z-index: 9;
+}
+.car__under {
+	width: 190px;
+	height: 120px;
+	border-radius: 150% 150%;
+	background: #bc7604;
+	transform: scale3d(1, 1.3, 1);
+}
+.car__under--front {
+	position: absolute;
+	top: -5px;
+	left: 250px;
+	z-index: 5;
+}
+.car__under--back {
+	position: absolute;
+	top: -5px;
+	left: 769px;
+	z-index: 5;
+}
+.car__rim {
+	position: absolute;
+	z-index: 10;
+	top: 0px;
+	left: 0px;
+	width: 91px;
+	height: 91px;
+	border-radius: 50%;
+	background: #696666;
+	border: 20px dashed hsl(60, 8%, 93%);
+}
+.car__wheel--front {
+	position: absolute;
+	top: 0px;
+	left: 270px;
+}
+.car__wheel--back {
+	position: absolute;
+	top: 0px;
+	left: 790px;
+}
+
+/* -----------------------block-text-------------------- */
+.page__block {
+	border: 2px solid #7c7676;
+	border-radius: 8px;
+	background: #fbf3f3;
+	padding: 25px;
+	box-shadow: 5px 5px 5px #7c7676;
+}
+.block__content p{
+	transition: all 1s;
+}
+.block__text {
+	font-size: 20px;
+	line-height: 1.4;
+}
+.block__text p:not(:last-child) {
+	margin: 0px 0px 20px 0px;
+}
+.block__text p:nth-child(even) {
+	transform: translate(120%, 0px);
+}
+.block__text p:nth-child(odd) {
+	transform: translate(-120%, 0px);
+}
+.block__text p:nth-child(odd) {
+	background-color: #e0f1b1;
+}
+.block__content:hover p {
+	transform: translate(0px, 0px);
+	font-size: 25px;
+	transition: all 1.5s cubic-bezier(0.100, 0.995, 0.480, 0.425);;
+}
+.block__content:hover p:nth-child(2) {
+	transition-delay: 0.2s;
+}
+.block__content:hover p:nth-child(3) {
+	transition-delay: 0.4s;
+}
+.block__content:hover p:nth-child(4) {
+	transition-delay: 0.6s;
+}
+.block__content:hover p:nth-child(5) {
+	transition-delay: 0.8s;
+}
+.block__content:hover p:nth-child(6) {
+	transition-delay: 1s;
+}
+.block__content:hover p:nth-child(7) {
+	transition-delay: 1.2s;
+}
+.block__content:hover p:nth-child(8) {
+	transition-delay: 1.4s;
+}
+.block__content:hover p:nth-child(9) {
+	transition-delay: 1.6s;
+}
+.block__content:hover p:last-child {
+	transition-delay: 1.8s;
+}
+
+/* ---------------------footer------------------------ */
+
+.footer {
+	animation: position 1s;
+	padding: 0px 0px 20px 0px;
+}
+.footer__content {
+	border: 2px solid #7c7676;
+	border-radius: 8px;
+	background: #fbf3f3;
+	padding: 25px;
+	font-weight: 700;
+	box-shadow: 5px 5px 5px #7c7676;
+	text-align: center;
+	font-size: 25px;
+	line-height: 1.2;
+}
