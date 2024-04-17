@@ -11,7 +11,7 @@ body {
 	background: url("../img/bg_bee.webp") 0 0 fixed;
 	min-height: 800px;
 	font-family: "Ubuntu Mono", monospace;
-	overflow: hidden;
+	overflow-X: hidden;
 }
 [class*=__container] {
 	max-width: 1360px;
