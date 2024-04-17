@@ -1,4 +1,4 @@
-/* 
+
 @keyframes move-right {
 	0% {
 		transform: translate(100%);
@@ -46,7 +46,7 @@
 	100% {
 		opacity: 0;
 	}
-} */
+} 
 
 @keyframes bee-left-1 {
 	0% {
@@ -175,4 +175,4 @@
 		transform: translate(500px, 400px) rotate(360deg);
 	}
 }
- */
+ 
