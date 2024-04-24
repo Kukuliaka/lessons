@@ -154,8 +154,18 @@ body {
 	padding: 10px 15px;
 	transition: 0.3s;
 } 
+.middle-menu__window input {
+	width: 350px;
+	height: 50px;
+}
+.middle-menu__search input:focus {
+	outline: none;
+}
 .middle-menu__window:hover {
 	box-shadow: inset 2px 2px 8px 2px #b6b4b4;
+}
+.middle-menu__window:focus {
+	outline: 5px solid red;
 }
 .middle-menu__image {
 	padding: 7px 0px 0px 0px;
@@ -290,6 +300,7 @@ main {
 }
 .item-categories__content:hover {
 	box-shadow: 1px 1px 8px 3px #c1bfbf;
+	transform: scale(1.02);
 }
 .item-categories__content img {
 	width: 100%;
@@ -385,6 +396,7 @@ main {
 }
 .card:hover {
 	box-shadow: 3px 4px 15px 0px rgba(0, 0, 0, 0.532);
+	transform: scale(1.02);
 }
 .card__image img {
 	width: 260px;
@@ -399,7 +411,7 @@ main {
 	flex-grow: 1;
 }
 .card__image img:hover {
-	transform: scale(1.03);
+	transform: scale(1.02);
 }
 .card__size {
 	color: #535353;
