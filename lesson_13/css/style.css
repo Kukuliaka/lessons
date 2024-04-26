@@ -291,7 +291,7 @@ main {
 	#ffffff;
 	border-radius: 8px;
 	flex-basis: 250px;
-	height: 300px;
+	min-height: 300px;
 	flex-shrink: 0;
 	box-shadow: 1px 1px 8px 3px #f2eded;
 	position: relative;
@@ -389,7 +389,6 @@ main {
 	box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
 	flex-basis: 300px;
 	flex-shrink: 0;
-	height: 468px;
 	overflow: clip;
 	justify-content: space-between;
 	transition: 0.3s;
