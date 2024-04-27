@@ -107,7 +107,6 @@ body {
 
 .header__middle-menu {
 	border-bottom: 2px solid #F8F8F8;
-	
 }
 .middle-menu {
 	padding: 25px 0px;
@@ -157,21 +156,29 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 10px 15px;
+	padding: 10px 0px;
 	transition: 0.3s;
+	position: relative;
 } 
 .middle-menu__window input {
-	width: 350px;
+	width: 421px;
 	height: 50px;
+	border-radius: 8px;
+	padding: 0px 55px 0px 15px;
+	transition: 0.3s;
+}
+.middle-menu__image {
+	position: absolute;
+	right: 13px;
+	display: inline-block;
+	margin: 0px 0px 0px 15px;
 }
 .middle-menu__search input:focus {
 	outline: none;
-}
-.middle-menu__window:hover {
 	box-shadow: inset 2px 2px 8px 2px #b6b4b4;
 }
-.middle-menu__window:focus {
-	outline: 5px solid red;
+.middle-menu__search input:hover {
+	box-shadow: inset 2px 2px 8px 2px #b6b4b4;
 }
 .middle-menu__image {
 	padding: 7px 0px 0px 0px;
