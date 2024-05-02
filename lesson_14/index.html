@@ -343,7 +343,7 @@
 									</button>
 								</div>
 							</div>
-						</div>
+						</form>
 						<div class="page__forms forms">
 							<h2 class="forms__title title">
 								Тренувальна форма
@@ -351,64 +351,50 @@
 							<form enctype="multipart/form-data" action="#"
 								method="post">
 								<input class="forms__input" type="text" name="form[]"
-									placeholder="Введіть своє ім'я"
-									class="forms__input">
+									placeholder="Введіть своє ім'я">
 								<input class="forms__input" type="search" name="form[]"
-									placeholder="Пошук"
-									class="forms__input">
+									placeholder="Пошук">
 								<label for="input-email">Введіть свою електронну адресу</label>
 								<input class="forms__input" required type="email" id="input-email"
-									name="form[]"
-									class="forms__input">
+									name="form[]">
 								<label for="input-phone">Введіть свій номер телефону</label>
 								<input class="forms__input" required type="tel" id="input-phone"
-									name="form[]"
-									class="forms__input">
+									name="form[]">
 								<input class="forms__input" required type="number" name="form[]"
-									placeholder="Ваш вік"
-									minlength="2" maxlength="2" class="forms__input">
+									placeholder="Ваш вік">
 								<label for="color">Виберіть колір</label>
-								<input type="color" value="#ff89ff" id="color"
-									name="form[]"
+								<input type="color" value="#ff89ff" id="color" name="form[]"
 									class="forms__input forms__input--color">
 								<label for="input-range">Введіть максимальну ціну</label>
-								<input type="range" id="input-range" name="form[]"
-									value="0"
+								<input type="range" id="input-range" name="form[]" value="0"
 									autocomplete="off" class="forms__input forms__input--range">
 								<label for="input-date">Введіть бажану дату</label>
 								<input class="forms__input" type="date" id="input-date" name="form[]"
-									autocomplete="off"
-									class="forms__input">
+									autocomplete="off">
 								<label for="input-password">Введіть свій пароль</label>
 								<input class="forms__input" type="password" id="input-password"
-									name="form[]" minlength="6"
-									class="forms__input">
+									name="form[]" minlength="6" maxlength="15">
 								<fieldset class="forms__checkbox checkbox">
 									<legend class="checkbox__title">Виберіть улюблену марку
 										автомобіля</legend>
 									<label class="checkbox__item">
-										<input checked type="checkbox" value="BMW"
-											class="checkbox__car">
+										<input checked type="checkbox" value="BMW" class="checkbox__car">
 										<span>BMW</span>
 									</label>
 									<label class="checkbox__item">
-										<input type="checkbox" value="Toyota"
-											class="checkbox__car">
+										<input type="checkbox" value="Toyota" class="checkbox__car">
 										<span>Toyota</span>
 									</label>
 									<label class="checkbox__item">
-										<input type="checkbox" value="Honda"
-											class="checkbox__car">
+										<input type="checkbox" value="Honda" class="checkbox__car">
 										<span>Honda</span>
 									</label>
 									<label class="checkbox__item">
-										<input type="checkbox" value="Lexus"
-											class="checkbox__car">
+										<input type="checkbox" value="Lexus" class="checkbox__car">
 										<span>Lexus</span>
 									</label>
 									<label class="checkbox__item">
-										<input type="checkbox" value="Ferrari"
-											class="checkbox__car">
+										<input type="checkbox" value="Ferrari" class="checkbox__car">
 										<span>Ferrari</span>
 									</label>
 								</fieldset>
@@ -445,7 +431,6 @@
 										<option value="not decided">Ще не вирішив</option>
 									</select>
 								</fieldset>
-
 								<button type="reset">Очистити</button>
 								<button type="submit">Відправити</button>
 							</form>
