@@ -433,7 +433,7 @@ main {
 }
 .radio-buttons__item {
 	flex-basis: 210px;
-	padding: 20px;
+	padding: 20px 15px;
 	border: 3px solid #F8F8F8;
 	border-radius: 8px;
 	position: relative;
