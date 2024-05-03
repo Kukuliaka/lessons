@@ -109,6 +109,7 @@ body {
 	align-items: center;
 	justify-content: space-between;
 	padding: 3px 0px;
+	gap: 15px;
 }
 .middle-menu__logo img {
 	width: 250px;
