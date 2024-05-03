@@ -73,11 +73,11 @@
 				<div class="header__middle-menu middle-menu">
 					<div class="middle-menu__container">
 						<div class="middle-menu__items">
-							<h1 class="middle-menu__logo">
+							<div class="middle-menu__logo">
 								<a href="#">
 									<img src="img/header/logo_header.svg" alt="логотип">
 								</a>
-							</h1>
+							</div>
 							<div class="middle-menu__button button">
 								<a href="#" class="button__link">
 									<span>Каталог</span>
@@ -200,16 +200,16 @@
 			<main class="page">
 				<div class="page__container">
 					<div class="page__section">
-						<h2 class="page__title title">
+						<h1 class="page__title title">
 							Оформлення замовлення
-						</h2>
+						</h1>
 						<form action="#" enctype="multipart/form-data" class="page__form form"
 							method="get">
 							<div class="form__box form__box--buyer">
-								<h3 class="form__title title-form">
+								<h2 class="form__title title-form">
 									<img src="img/main/icons/icon_info.svg" alt="іконка">
 									<span>Інформація про покупця</span>
-								</h3>
+								</h2>
 								<div class="form__inputs">
 									<input required type="text" name="form{}"
 										placeholder="Прізвище">
@@ -229,13 +229,14 @@
 								</label>
 							</div>
 							<div class="form__box form__box--delivery">
-								<h3 class="form__title title-form">
+								<h2 class="form__title title-form">
 									<img src="img/main/icons/icon_delivery.svg" alt="іконка">
 									<span>Вибір способу доставки</span>
-								</h3>
+								</h2>
 								<fieldset class="radio-buttons radio-buttons--margin">
 									<label class="radio-buttons__item">
-										<input class="radio-buttons__input" type="radio" name="radio-btn"
+										<input required class="radio-buttons__input" type="radio"
+											name="radio-btn"
 											value="pickup">
 										<img class="radio-buttons__icon" src="img/main/icons/icon_store.svg"
 											alt="іконка">
@@ -253,7 +254,7 @@
 										</span>
 									</label>
 									<label class="radio-buttons__item">
-										<input checked class="radio-buttons__input" type="radio"
+										<input class="radio-buttons__input" type="radio"
 											name="radio-btn" value="courier">
 										<img class="radio-buttons__icon" src="img/main/icons/icon_courier.svg"
 											alt="іконка">
@@ -282,13 +283,13 @@
 								</div>
 							</div>
 							<div class="form__box form__box--pay">
-								<h3 class="form__title title-form">
+								<h2 class="form__title title-form">
 									<img src="img/main/icons/icon_pay.svg" alt="іконка">
 									<span>Вибір способу оплати</span>
-								</h3>
+								</h2>
 								<fieldset class="form__group group-radio">
 									<label class="group-radio__item">
-										<input type="radio" name="input-radio" value="cash"
+										<input required type="radio" name="input-radio" value="cash"
 											class="group-radio__input">
 										<span class="group-radio__text">Готівкою при отриманні
 											(Післясплата)</span>
@@ -331,10 +332,10 @@
 								</fieldset>
 							</div>
 							<div class="form__box form__box--order">
-								<h3 class="form__title title-form">
+								<h2 class="form__title title-form">
 									<img src="img/main/icons/icon_comment.svg" alt="іконка">
 									<span>Коментар до замовлення</span>
-								</h3>
+								</h2>
 								<textarea class="form__textarea" name="form[]"
 									placeholder="Ваш коментар"></textarea>
 								<div class="form__btn">

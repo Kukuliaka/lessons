@@ -109,7 +109,6 @@ body {
 	align-items: center;
 	justify-content: space-between;
 	padding: 3px 0px;
-	gap: 15px;
 }
 .middle-menu__logo img {
 	width: 250px;
@@ -335,11 +334,14 @@ main {
 	box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
 	overflow: hidden;
 }
+.form > div:not(:last-child) {
+	margin: 0px 0px 5px 0px;
+}
 
 /* --------------------------- form__box--buyer ------------------- */
 
-.form__box--buyer input:hover {
-	outline: 3px solid #d2cfcf;
+.form__box--buyer input {
+	transition: outline 0.2s;
 }
 .form input:focus-visible {
 	outline: 3px solid #f0ac46;
@@ -347,7 +349,6 @@ main {
 .form__box {
 	background-color: #fff;
 	padding: 30px;
-	margin: 0px 0px 5px 0px;
 }
 .form__inputs input {
 	width: 325px;
@@ -384,14 +385,15 @@ main {
 }
 .form__checkbox {
 	position: relative;
-	display: inline-flex;
+	display: flex;
 	justify-content: flex-start;
 	cursor: pointer;
 }
 .form__text-check {
 	color: #535353;
 	line-height: 1.2;
-	transition: 0.2s;
+	display: flex;
+	transition: color 0.3s;
 }
 .form__text-check:hover {
 	color: #f0ac46;
@@ -443,6 +445,7 @@ main {
 	flex-direction: column;
 	gap: 10px;
 	align-items: center;
+	transition: outline 0.2s;
 }
 .radio-buttons__item:hover {
 	outline: 3px solid #d2cfcf;
@@ -459,7 +462,7 @@ main {
 	flex: 0 0 48px;
 	width: 48px;
 }
-.radio-buttons__item:focus-visible {
+.radio-buttons__item:has(> .radio-buttons__input:focus-visible) {
 	outline: 3px solid #f19a17;
 }
 .radio-buttons__item:has(> .radio-buttons__input:checked) {
@@ -533,7 +536,7 @@ main {
 	font-weight: 600;
 	line-height: 1.26;
 	color: #fff;
-	transition: 0.3s;
+	transition: background-color 0.3s;
 }
 .location__link span::before {
 	content: "";
@@ -596,7 +599,8 @@ main {
 	color: #2B2929;
 	font-size: 17px;
 	line-height: 1.2;
-	transition: 0.2s;
+	transition: color 0.2s;
+	display: flex;
 }
 .group-radio__text:hover {
 	color:#f0ac46;
@@ -625,6 +629,7 @@ main {
 	background: #FFF;
 	resize: vertical;
 	margin: 0px 0px 30px 0px;
+	transition: outline 0.2s;
 }
 .form__textarea:hover {
 	outline: 3px solid #d2cfcf;
