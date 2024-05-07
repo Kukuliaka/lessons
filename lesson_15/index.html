@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+	<head>
+		<!-- Кодирование текста -->
+		<meta charset="UTF-8">
+		<!-- Настройки в'юпорта (адаптива, масштаба) -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Подключение отдельного файла стилей -->
+		<link rel="stylesheet" href="css/style.css">
+		<!-- Заголовок страницы в браузере -->
+		<title>Lesson 15</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__top-menu top-menu">
+					<div class="top-menu__container">
+						<div class="top-menu__items">
+							<span class="top-menu__logo">
+								<a href="#">
+									<img src="img/header/logo_header.svg" alt="логотип">
+								</a>
+							</span>
+							<ul class="top-menu__list">
+								<li class="top-menu__item">
+									<a href="#" class="top-menu__link">Про нас</a>
+								</li>
+								<li class="top-menu__item">
+									<a href="#" class="top-menu__link">Оплата</a>
+								</li>
+								<li class="top-menu__item">
+									<a href="#" class="top-menu__link">Доставка та збірка</a>
+								</li>
+								<li class="top-menu__item">
+									<a href="#" class="top-menu__link">Відгуки</a>
+								</li>
+								<li class="top-menu__item">
+									<a href="#" class="top-menu__link">Блог</a>
+								</li>
+								<li class="top-menu__item">
+									<a href="#" class="top-menu__link">Контакти</a>
+								</li>
+							</ul>
+							<div class="top-menu__media">
+								<div class="top-menu__item top-menu__item--text">
+									Допомога і консультація:
+								</div>
+								<ul class="top-menu__list-media">
+									<li class="top-menu__item">
+										<a target="_blank" href="#" class="top-menu__link">
+											<img src="img/header/icons/whatsapp.svg" alt="іконка ватсап">
+										</a>
+									</li>
+									<li class="top-menu__item">
+										<a target="_blank" href="#" class="top-menu__link">
+											<img src="img/header/icons/telegram.svg" alt="іконка телеграм">
+										</a>
+									</li>
+									<li class="top-menu__item">
+										<a target="_blank" href="#" class="top-menu__link">
+											<img src="img/header/icons/viber.svg" alt="іконка вайбер">
+										</a>
+									</li>
+								</ul>
+								<div class="top-menu__item top-menu__item--lang">
+									<form method="get" action="#" enctype="multipart/form-data">
+										<select class="top-menu__language">
+											<option value="ua">UA</option>
+											<option value="en">EN</option>
+											<option value="bе">BE</option>
+										</select>
+									</form>
+								</div>
+							</div>
+							<div class="top-menu__link-mobile">
+								<a href="#">
+									<img src="img/header/icons/phone.svg" alt="телефон">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header__middle-menu middle-menu">
+					<div class="middle-menu__container">
+						<div class="middle-menu__items">
+							<div class="middle-menu__logo">
+								<a href="#">
+									<img src="img/header/logo_header.svg" alt="логотип">
+								</a>
+							</div>
+							<div class="middle-menu__button button">
+								<a href="#" class="button__link">
+									<span>Каталог</span>
+								</a>
+							</div>
+							<div class="middle-menu__window">
+								<form action="#" enctype="multipart/form-data"
+									class="middle-menu__search">
+									<input type="text" name="form[]" placeholder="Пошук товарів">
+									<button class="middle-menu__image">
+										<img src="img/header/icons/search.svg" alt="лупа">
+									</button>
+								</form>
+							</div>
+							<div class="middle-menu__mobile-searsh">
+								<button type="button">
+									<img src="img/header/icons/search_round.svg" alt="іконка пошуку">
+								</button>
+							</div>
+							<div class="middle-menu__phone phone">
+								<div class="phone__link-mobile">
+									<a href="#">
+										<img src="img/header/icons/phone.svg" alt="телефон">
+									</a>
+								</div>
+								<div class="phone__icon">
+									<img src="img/header/icons/phone.svg" alt="телефон">
+								</div>
+								<div class="phone__content">
+									<div class="phone__time">
+										Щодня з 9:00 до 18:00
+									</div>
+									<div class="phone__number">
+										<a class="phone__call" href="tel:0679294545" target="_blank">
+											067 929-45-45
+										</a>
+									</div>
+									<div class="phone__number phone__number--hidden">
+										<a class="phone__call" href="tel:0679294554" target="_blank">
+											067 929-45-54
+										</a>
+										<a class="phone__call" href="tel:0679294565" target="_blank">
+											067 929-45-65
+										</a>
+										<a class="phone__call" href="tel:0679294569" target="_blank">
+											067 929-45-69
+										</a>
+									</div>
+								</div>
+								<div class="phone__icon-arrow">
+									<a href="#">
+										<img src="img/header/icons/arrow_down.svg" alt="стрілка">
+									</a>
+								</div>
+							</div>
+							<div class="middle-menu__favorites">
+								<a href="#">
+									<img src="img/header/icons/heart_orange.svg" alt="серце">
+								</a>
+							</div>
+							<div class="middle-menu__basket">
+								<a href="#">
+									<img src="img/header/icons/basket_orange.svg" alt="кошик">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header__bottom-menu bottom-menu">
+					<div class="bottom-menu__container">
+						<div class="bottom-menu__items">
+							<ul class="bottom-menu__list">
+								<li class="bottom-menu__item bottom-menu__item--icon-promotion">
+									<a class="bottom-menu__link" href="#">
+										Акції
+									</a>
+								</li>
+								<li class="bottom-menu__item bottom-menu__item--icon-sale">
+									<a class="bottom-menu__link" href="#">
+										Розпродаж
+									</a>
+								</li>
+								<li class="bottom-menu__item bottom-menu__item--icon-credit">
+									<a class="bottom-menu__link" href="#">
+										Купити в кредит
+									</a>
+								</li>
+							</ul>
+							<ul class="bottom-menu__list">
+								<li class="bottom-menu__item">
+									<a class="bottom-menu__link" href="#">
+										Дитяча
+									</a>
+								</li>
+								<li class="bottom-menu__item">
+									<a class="bottom-menu__link" href="#">
+										Кухня
+									</a>
+								</li>
+								<li class="bottom-menu__item">
+									<a class="bottom-menu__link" href="#">
+										Ванна
+									</a>
+								</li>
+								<li class="bottom-menu__item">
+									<a class="bottom-menu__link" href="#">
+										Спальня
+									</a>
+								</li>
+								<li class="bottom-menu__item">
+									<a class="bottom-menu__link" href="#">
+										Передпокій
+									</a>
+								</li>
+								<li class="bottom-menu__item">
+									<a class="bottom-menu__link" href="#">
+										Вітальня
+									</a>
+								</li>
+								<li class="bottom-menu__item">
+									<a class="bottom-menu__link" href="#">
+										Офіс
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="page">
+				<div class="page__container">
+					<div class="page__section">
+						<h1 class="page__title title">
+							Оформлення замовлення
+						</h1>
+					</div>
+				</div>
+			</main>
+			<footer class="footer">
+				<div class="footer__container">
+					<div class="footer__logo">
+						<a href="#">
+							<img src="img/footer/logo_footer.svg" alt="логотип">
+						</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+
+</html>
