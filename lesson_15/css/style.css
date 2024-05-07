@@ -116,6 +116,9 @@ body {
 		background: #fff;
 		border-bottom: 2px solid #F8F8F8;
 	}
+	.top-menu__language {
+		background-color: #fff;
+	}
 	.top-menu__items span {
 		display: block;
 	}
