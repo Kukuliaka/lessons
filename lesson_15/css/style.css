@@ -572,9 +572,6 @@ body {
 		gap: 20px;
 		row-gap: 10px;
 	}
-}
-
-@media (max-width: 630px) {
 	.header__bottom-menu {
 		display: none;
 	}
