@@ -28,6 +28,10 @@ body {
 
 /* -------------------- header__top-menu -------------------- */
 
+.header {
+	position: sticky;
+	top: 0;
+}
 .header__top-menu {
 	background: #F8F8F8;
 }
@@ -210,6 +214,7 @@ body {
 
 .middle-menu {
 	padding: 12px 0px;
+	background: #fff;
 }
 .middle-menu__items {
 	display: flex;
@@ -472,6 +477,7 @@ body {
 @media (max-width: 479.98px) {
 .middle-menu__items {
 		gap: 8px;
+		flex-wrap: wrap;
 	}
 	.phone__link-mobile {
 		display: none;
@@ -485,6 +491,7 @@ body {
 
 .bottom-menu {
 	padding: 18px 0px;
+	background: #fff;
 }
 .bottom-menu__items {
 	display: flex;
@@ -587,25 +594,85 @@ main {
 	padding: 55px 0px;
 	color: #2B2929;
 }
-.page__title {
-	margin: 0px 0px 40px 0px;
-}
 .title {
 	font-size: 40px;
 	line-height: 1.2;
 	color: #2B2929;
 	font-weight: 600;
 }
+.page__container {
+	max-width: 1070px;
+	margin: 0 auto;
+	padding: 0px 15px;
+}
+.page__section {
+	display: flex;
+	flex-direction: column;
+	row-gap: 40px;
+}
+.page__image {
+	max-width: 1070px;
+	max-height: 380px;
+}
+.page__image img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 1070 / 380;
+	border-radius: 8px;
+}
+.page__content {
+	color: #2B2929;
+	font-size: 16px;
+	line-height: 1.87;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+.page__block-text p:not(:last-child) {
+	margin: 0px 0px 10px 0px;
+}
+.page__subtitle {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.4;
+	margin: 0px 0px -10px 0px;
+}
+.page__list {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.page__list li::before {
+	content: "";
+	background: url("../img/main/icons/icon.png") 0 0 / 32px 32px no-repeat;
+	width: 32px;
+	height: 32px;
+	top: 0;
+	left: 0;
+	padding: 0px 40px 0px 0px;
+}
+.page__item {
+	display: flex;
+}
+
+/* ===================================== @media-breakpoints ====================== */
 
 @media (max-width: 767.98px) {
 	.page {
 		padding: 30px 0px;
 	}
-	.page__title {
-		margin: 0px 0px 30px 0px;
-	}
 	.title {
 		font-size: 32px;
+	}
+	.page__section {
+		row-gap: 25px;
+	}
+	.page__content {
+		gap: 20px;
+	}
+	.page__list {
+		gap: 15px;
 	}
 }
 
@@ -613,11 +680,25 @@ main {
 	.page {
 		padding: 25px 0px;
 	}
-	.page__title {
-		margin: 0px 0px 20px 0px;
-	}
 	.title {
 		font-size: 26px;
+	}
+	.page__section {
+		row-gap: 20px;
+	}
+	.page__content {
+		gap: 15px;
+		font-size: 16px;
+		line-height: 1.6;
+	}
+	.page__list {
+		gap: 12px;
+	}
+	.page__subtitle {
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 1.4;
+		margin: 0px;
 	}
 }
 
