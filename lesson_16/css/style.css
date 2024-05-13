@@ -515,6 +515,12 @@ body {
 	}
 } 
 
+@media (max-width: 1060px) {
+	.connection-top-header__label {
+		display: none;
+	}
+}
+
 @media (max-width: 991.98px) {
 	.contacts-middle-header__body {
 		display: none;
