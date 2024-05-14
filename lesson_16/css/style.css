@@ -298,7 +298,7 @@ body {
 	flex: 0 0 50px;
 	width: 50px;
 	height: 50px;
-	z-index: 2;
+	z-index: 4;
 }
 .contacts-middle-header__body {
 	position: relative;
@@ -496,7 +496,9 @@ body {
 		color: #FFBC57;
 	}
 }
-
+.drop-phone {
+	display: none;
+}
 /* -------------------------------- Адаптив --------------------------- */
 
 @media (max-width: 1160px) {
@@ -523,10 +525,31 @@ body {
 
 @media (max-width: 991.98px) {
 	.contacts-middle-header__body {
-		display: none;
+		position: fixed;
+		right: -100%;
+		transition: 0.3s;
+		z-index: 2;
+	}
+	.contacts-middle-header__body::before {
+		content: "";
+		position: fixed;
+		width: 200px;
+		height: 50px;
+		right: -100%;
+		transition: 0.3s;
+		background-color: #fff;
 	}
 	.middle-header__container {
 		column-gap: 15px;
+	}
+	.phone-open .contacts-middle-header__body {
+		right: 30px;
+	}
+	.phone-open .contacts-middle-header__body::before {
+		right: 0px;
+	}
+	.contacts-middle-header__body::after {
+		display: none;
 	}
 }
 
@@ -576,6 +599,9 @@ body {
 	}
 	.middle-header__menu-icon span::before {
 		top: 10px;
+	}
+	.search-middle-header {
+		min-width: 321px;
 	}
 	.header__bottom {
 		position: fixed;
@@ -667,6 +693,9 @@ body {
 	.middle-header__container {
 		column-gap: 15px;
 	}
+	.search-middle-header {
+		min-width: 0;
+	}
 }
 
 @media (max-width: 479.98px) {
@@ -701,6 +730,9 @@ body {
 		width: 40px;
 		height: 40px;
 		flex-basis: 40px;
+	}
+	.contacts-middle-header__body {
+		top: 115px;
 	}
 }
 
