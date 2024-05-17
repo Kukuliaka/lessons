@@ -1033,6 +1033,13 @@ main {
 	}
 }
 
+@media(max-width: 520px) {
+	.section-products__container {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
 /* -------------------------- footer ----------------- */
 
 .footer {
