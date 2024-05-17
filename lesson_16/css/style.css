@@ -673,7 +673,7 @@ body {
 	}
 	.top-header__menu {
 		padding: 0;
-		flex-direction: column;
+		flex-direction: column-reverse;
 		row-gap: 30px;
 	}
 	.menu-top-header__list {
