@@ -920,7 +920,6 @@ main {
 	grid-template-columns: 1fr;
 	grid-template-rows: minmax(220px, auto)  1fr auto;
 	gap: 20px;
-	align-items-content: space-between;
 }
 @media (any-hover: hover) {
 	.section-products__item:hover {
