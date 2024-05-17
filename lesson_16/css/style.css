@@ -101,6 +101,15 @@ body {
 	align-items: center;
 	transition: 0.3s;
 }
+.social-media__link img {
+	width: 60%;
+	height: 60%;
+}
+.social-media__link--telegram img {
+	width: 100%;
+	height: 100%;
+}
+
 @media (any-hover: hover) {
 	.social-media__link:hover {
 		transform: scale(1.1);
