@@ -1,0 +1,327 @@
+/* Локальное подключение шрифтов */
+@import url("fonts.css");
+/* Подключаем стили обнуления */
+@import url("reset.css");
+/* Подключаем файл анимации */
+@import url("keys.css");
+/* Основные стили */
+
+
+body {
+	font-family: 'Proxima Nova', sans-serif;
+	color: #535353;
+}
+[class*=__container] {
+	max-width: 1320px;
+	margin: 0 auto;
+	padding: 0px 15px;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.header {
+	padding: 20px 0px;
+	background-color: #fff;
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
+}
+
+/* ------------------------- main ------------------------ */
+
+main {
+	flex-grow: 1;
+}
+.page {
+	padding: 20px 0px 0px 0px;
+}
+.page__section {}
+
+/* --------------------- section-style -------------*/
+
+.section-style {
+	padding: 0px 10px;
+	color: #000;
+}
+.section-style__title {
+	margin: 0px 0px 65px 0px;
+}
+.title-section-style {
+	text-align: center;
+	font-family: 'Integral CF', sans-serif;
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+.section-style__container {
+	max-width: 1260px;
+	border-radius: 40px;
+	background: #F0F0F0;
+	margin: 0px auto 40px;
+}
+
+@media(min-width: 768px) {
+	.section-style__container {
+		padding: 70px 65px 75px;
+	}
+	.section-style__box {
+		display: grid;
+		gap: 20px;
+		grid-template-columns: 40% 20% 40%;
+		grid-template-rows: repeat(2, 289px);
+		justify-content: center;
+		grid-auto-rows: 289px;
+	}
+	.section-style__item:nth-child(4n + 2),
+	.section-style__item:nth-child(4n - 1) {
+		grid-column: span 2;
+	}
+}
+@media(max-width: 991.98px) {
+	.section-style__container {
+		padding: 50px 65px 50px;
+	}
+	.section-style__title {
+		margin: 0px 0px 40px 0px;
+	}
+	.title-section-style {
+		font-size: 42px;
+	}
+}
+@media(max-width: 767.98px) {
+	.section-style__container {
+		padding: 25px; 
+	}
+	.section-style__title {
+		margin: 0px 0px 30px 0px;
+	}
+	.title-section-style {
+		font-size: 32px;
+	}
+	.section-style__box div:not(:last-child) {
+		margin: 0px 0px 20px 0px;
+	}
+}
+@media(max-width: 467.98px) {
+	.section-style__container {
+		padding: 20px; 
+	}
+	.section-style__title {
+		margin: 0px 0px 20px 0px;
+	}
+	.title-section-style {
+		font-size: 24px;
+	}
+}
+.section-style__label {
+	font-family: Satoshi, sans-serif;
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 1.2;
+	position: absolute;
+	top: 25px;
+	left: 35px;
+}
+.section-style__item {
+	border-radius: 20px;
+	position: relative;
+	overflow: hidden;
+	transition: 0.5s;
+}
+.section-style__link {
+	width: 100%;
+	height: 100%;
+}
+
+@media (any-hover: hover) {
+	.section-style__item:hover {
+		opacity: 0.7;
+		box-shadow: -3px 4px 15px 3px rgba(0, 0, 0, 0.06);
+	}
+}
+
+.section-style__item img{
+	border-radius: 20px; 
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 407 / 289;
+}
+
+/* size pictures 407 / 289 ; 684 / 289 ; gap: 20px */
+
+/* ------------------------ section-products ------------- */
+
+.page__section {}
+
+.section-products {
+	padding: 50px 0px;
+	background: #F8F8F8;
+	color: #2B2929;
+}
+.section-products__container {}
+
+.section-products__title {
+	margin: 0px 0px 40px 0px;
+}
+.title-section-products {
+	font-size: 40px;
+	font-weight: 600;
+	line-height: 1.2;
+}
+.section-products__box {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+	grid-template-rows: minmax(468px, auto);
+	grid-auto-rows: 1fr;
+	gap: 30px;
+	justify-content: center;
+}
+.section-products__item {
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 8px;
+	border: 1px solid #E3E2E2;
+	box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
+	transition: box-shadow 0.3s;
+}
+.section-products__card {
+	display: grid;
+	height: 100%;
+	grid-template-columns: 1fr;
+	grid-template-rows: minmax(220px, auto)  1fr auto;
+	gap: 20px;
+}
+@media (any-hover: hover) {
+	.section-products__item:hover {
+		box-shadow: 2px 2px 5px #B1B1B1;
+	}
+}
+.section-products__image {
+	border-radius: 8px;
+	transition: opacity 0.3s;
+}
+@media (any-hover: hover) {
+	.section-products__image:hover {
+		opacity: 0.8;
+	}
+}
+.section-products__image img {
+	border-radius: 8px;
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 260 / 220;
+	object-fit: cover;
+}
+.section-products__content {
+	display: grid;
+	gap: 10px;
+}
+.section-products__size {
+	color: #535353;
+	font-size: 13px;
+	font-weight: 300;
+	line-height: 1.69;
+}
+.section-products__subtitle {
+	font-size: 19px;
+	font-weight: 600;
+	line-height: 1.26;
+	transition: 0.3s;
+	display: inline;
+}
+@media (any-hover: hover) {
+	.section-products__subtitle:hover {
+		color: #FFBC57;
+	}
+}
+.section-products__label {
+	font-size: 13px;
+	font-weight: 300;
+	line-height: 1.69;
+	display: flex;
+	align-items: start;
+	gap: 5px;
+	align-self: end;
+}
+.section-products__block-shop {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.section-products__prices {}
+
+.section-products__old-price {
+	color: #E03D3D;
+	font-size: 15px;
+	line-height: 1.46;
+	text-decoration: line-through;
+}
+.section-products__new-price {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.4;
+}
+.section-products__icons {
+	display: flex;
+	gap: 10px;
+}
+.section-products__icon {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: linear 0.3s;
+}
+.section-products__icon img {
+	width: 50%;
+	height: 50%;
+}
+@media (any-hover: hover) {
+	.section-products__icon:hover {
+		transform: scale(1.05);
+		opacity: 0.8;
+	}
+}
+.section-products__icon--grey {
+	background-color: #F0F0F0;
+}
+.section-products__icon--orange {
+	background-color: #FFBC57;
+}
+
+@media(max-width: 767.98px) {
+	.section-products {
+		padding: 30px 0px;
+	}
+	.section-products__title {
+		margin: 0px 0px 20px 0px;
+	}
+	.title-section-products {
+		font-size: 30px;
+	}
+}
+
+@media(max-width: 520px) {
+	.section-products__container {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
+/* -------------------------- footer ----------------- */
+
+.footer {
+	background-color: #2B2929;
+	padding: 25px 0px;
+}
+.footer__logo img{
+	max-width: 150px;
+}
