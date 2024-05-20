@@ -176,7 +176,7 @@ main {
 }
 .section-products__box {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+	grid-template-columns: repeat(auto-fit, minmax(250px, auto));
 	grid-template-rows: minmax(468px, auto);
 	grid-auto-rows: 1fr;
 	gap: 30px;
@@ -194,7 +194,7 @@ main {
 	display: grid;
 	height: 100%;
 	grid-template-columns: 1fr;
-	grid-template-rows: minmax(220px, auto)  1fr auto;
+	grid-template-rows: minmax(170px, auto)  1fr auto;
 	gap: 20px;
 }
 @media (any-hover: hover) {
@@ -306,13 +306,6 @@ main {
 	}
 	.title-section-products {
 		font-size: 30px;
-	}
-}
-
-@media(max-width: 520px) {
-	.section-products__container {
-		padding-left: 30px;
-		padding-right: 30px;
 	}
 }
 
