@@ -11,3 +11,9 @@ document.addEventListener('click', function (e) {
 		document.documentElement.classList.toggle('phone-open');
 	}
 })
+document.addEventListener('click', function (e) {
+	const targetElement = e.target;
+	if (targetElement.closest('.actions-middle-header__icon--search')) {
+		document.documentElement.classList.toggle('search-open');
+	}
+})

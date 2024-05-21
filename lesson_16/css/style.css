@@ -28,7 +28,7 @@ body {
 	width: 100%;
 	z-index: 50;
 }
-/* ----------------- header__top --------------- */
+/* ----------------- header__top ----------------- */
 .header__top {}
 
 .top-header {
@@ -191,7 +191,6 @@ body {
 
 .middle-header {
 	padding: 25px 0px;
-	border-bottom: 2px solid #F8F8F8;
 }
 .middle-header__container {
 	display: flex;
@@ -208,10 +207,12 @@ body {
 	flex-shrink: 0;
 	display: flex;
 	justify-content: flex-end;
+	position: relative;
 	z-index: 2;
 }
 .middle-header__logo img {
 	width: 250px;
+	object-fit: contain;
 }
 .middle-header__catalog {
 	background-color: #FFBC57;
@@ -220,6 +221,7 @@ body {
 	transition: background-color 0.3s;
 	display: flex;
 	justify-content: center;
+	position: relative;
 	z-index: 2;
 }
 @media (any-hover: hover) {
@@ -249,22 +251,23 @@ body {
 .middle-header__search {}
 
 .search-middle-header {
-	border: 1px solid #b1b1b1;
-	border-radius: 8px;
 	flex-grow: 1;
 	flex-shrink: 1;
 	position: relative;
 	height: 50px;
-	z-index: 2;
+	z-index: 4;
 }
 .search-middle-header input::placeholder {
 	color: #B1B1B1;
 }
 .search-middle-header__input {
+	border: 1px solid #b1b1b1;
 	height: 50px;
 	padding: 0px 50px 0px 15px;
 	border-radius: 8px;
 	transition: outline 0.1s;
+	background-color: #fff;
+	position: relative;
 }
 .search-middle-header__input::-webkit-search-decoration,
 .search-middle-header__input::-webkit-search-cancel-button {
@@ -274,16 +277,17 @@ body {
 	opacity: 0;
 }
 .search-middle-header__input:focus {
-	outline: 2px solid #FFBC57;
+	border: 2px solid #FFBC57;
+}
+.search-middle-header__button {
+	position: absolute;
+	right: 0;
 }
 .search-middle-header__button::after {
 	content: "";
 	background: url("../img/header/icons/search.svg") center / 24px 24px no-repeat;
 	width: 50px;
 	height: 50px;
-	position: absolute;
-	right: 0;
-	top: 0;
 }
 .middle-header__contacts {}
 
@@ -295,7 +299,7 @@ body {
 }
 @media (any-hover: hover) {
 	.contacts-middle-header:hover .contacts-middle-header__icon{
-		animation: phone 0.15s infinite;
+		animation: phone linear 0.15s infinite;
 	}
 }
 .contacts-middle-header__icon {
@@ -307,6 +311,7 @@ body {
 	flex: 0 0 50px;
 	width: 50px;
 	height: 50px;
+	position: relative;
 	z-index: 4;
 }
 .contacts-middle-header__body {
@@ -403,6 +408,7 @@ body {
 	display: flex;
 	align-items: center;
 	gap: 10px;
+	position: relative;
 	z-index: 2;
 }
 .actions-middle-header__icon {
@@ -414,7 +420,10 @@ body {
 	height: 50px;
 	border: 2px solid #FFBC57;
 	border-radius: 50%;
-	transition: 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+}
+.actions-middle-header__icon--search {
+	display: none;
 }
 @media (any-hover: hover) {
 	.actions-middle-header__icon:hover {
@@ -431,6 +440,7 @@ body {
 .header__bottom {}
 
 .bottom-header {
+	border-top: 2px solid #F8F8F8;
 	padding: 18px 0px;
 	font-size: 19px;
 	font-weight: 600;
@@ -452,6 +462,7 @@ body {
 	flex-wrap: wrap;
 	column-gap: 40px;
 	row-gap: 10px;
+	flex: 1 1 450px;
 	align-items: center;
 }
 .action-menu__item {}
@@ -492,6 +503,8 @@ body {
 	flex-wrap: wrap;
 	column-gap: 40px;
 	row-gap: 10px;
+	flex: 1 1 600px;
+	max-width: 800px;
 	align-items: center;
 	justify-content: flex-end;
 }
@@ -543,7 +556,7 @@ body {
 		content: "";
 		position: fixed;
 		width: 200px;
-		height: 50px;
+		height: 40px;
 		right: -100%;
 		transition: 0.3s;
 		background-color: #fff;
@@ -621,14 +634,14 @@ body {
 		height: 100%;
 		background: #FFF;
 		z-index: 1;
-		padding: 150px 0px 0px 0px;
+		padding: 130px 0px 0px 0px;
 		overflow: auto;
 	}
 	.header__bottom::before {
 		content: "";
 		position: fixed;
 		width: 100%;
-		height: 150px;
+		height: 130px;
 		right: -100%;
 		transition: 0.3s;
 		top: 0;
@@ -647,11 +660,13 @@ body {
 		row-gap: 20px;
 		font-size: 24px;
 	}
-	.menu-open .header__bottom,
-	.header__bottom::before {
+	.menu-open .header__bottom {
 		right: 0;
 	}
-	.menu-open 	.middle-header__menu-icon::before {
+	.menu-open .header__bottom::before {
+		right: 0;
+	}
+	.menu-open .middle-header__menu-icon::before {
 		transform: rotate(-45deg);
 		top: 0;
 	}
@@ -671,6 +686,9 @@ body {
 		z-index: 1;
 		overflow: auto;
 	}
+	.top-header__container {
+		margin-bottom: 20px;
+	}
 	.top-header__menu {
 		padding: 0;
 		flex-direction: column-reverse;
@@ -680,7 +698,7 @@ body {
 		flex-direction: column;
 		row-gap: 20px;
 		align-items: center;
-		font-size: 20px;
+		font-size: 24px;
 	}
 	.connection-top-header__label {
 		font-size: 14px;
@@ -708,9 +726,6 @@ body {
 }
 
 @media (max-width: 479.98px) {
-	.middle-header__container {
-		column-gap: 10px;
-	}
 	.middle-header__logo {
 		width: 140px;
 		overflow: hidden;
@@ -735,32 +750,87 @@ body {
 		height: 40px;
 		flex-basis: 40px;
 	}
+	/* .contacts-middle-header__body {
+		top: 70px;
+	} */
 	.actions-middle-header__icon {
 		width: 40px;
 		height: 40px;
 		flex-basis: 40px;
 	}
-	.contacts-middle-header__body {
-		top: 115px;
-	}
 }
 
 @media (max-width: 420px) {
-	.actions-middle-header {
-		padding: 20px;
-		gap: 30px;
-		justify-content: center;
+	.middle-header__container {
+		column-gap: 30px;
 	}
-	.actions-middle-header__icon {
+	.contacts-middle-header__icon {
+		margin: 0px 0px 0px 50px;
+	}
+	.phone-open .contacts-middle-header__body {
+		right: 40%;
+	}
+	.phone-open .contacts-middle-header__body::before {
+		right: 40%;
+	}
+	.actions-middle-header__icon--search {
+		display: flex;
+	}
+	.search-middle-header,
+	.search-middle-header__input {
+		position: fixed;
+		top: 150px;
+		width: 90%;
+		height: 50px;
+		right: 15px;
+		z-index: 3;
+	}
+	.search-middle-header {
+		display: none;
+	}
+	.search-middle-header::before {
+		content: "";
+		position: fixed;
+		top: 130px;
+		left: 0;
+		background-color: #fff;
+		width: 100%;
+		height: 100px;
+		z-index: 2;
+	}
+	.search-middle-header__button::after {
+		position: fixed;
+		right: 15px;
+		top: 150px;
 		width: 50px;
 		height: 50px;
-		flex-basis: 50px;
+		background-size: 24px 24px;
+		z-index: 3;
+	}
+	.search-open .search-middle-header {
+		display: flex;
+	}
+	.search-open .actions-middle-header__icon--search img {
+		display: none;
+	}
+	.search-open .actions-middle-header__icon--search {
+		background: url("../img/header/icons/cross.svg") 50% 50% / 24px 24px no-repeat;
+	}
+	.actions-middle-header {
+		gap: 30px;
+	}
+}
+
+@media (max-width: 370px) {
+	.middle-header__container {
+		padding: 0px 10px;
+		column-gap: 20px;
 	}
 }
 
 @media (max-width: 340px) {
 	.middle-header__container {
-		padding: 0px 10px;
+		column-gap: 10px;
 	}
 }
 
