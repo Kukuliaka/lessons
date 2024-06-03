@@ -26,7 +26,7 @@
 
 	// .header__logo
 	&__logo {
-		@include textDecor ("Exo 2", 30px, 400, 1.25, normal);
+		@include textDecor ("Exo 2", 30px, 400, 1.25, none);
 		letter-spacing: -3px;
 		white-space: nowrap;
 		position: relative;

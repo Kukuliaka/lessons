@@ -25,7 +25,6 @@
 
 body {
 	font-family: Exo, sans-serif;
-	
 }
 [class*=__container] {
 	max-width: 1300px;
@@ -39,7 +38,6 @@ body {
 	min-height: 100%;
 	overflow: clip;
 }
-
 .page {
 	@extend %blackTheme;
 	// .page__presentation
@@ -87,9 +85,6 @@ body {
 	&__box {
 		display: flex;
 		justify-content: space-between;
-		@media (max-width: 768px) {
-			// flex-direction: column;
-		}
 	}
 
 	// .presentation__content
@@ -129,7 +124,7 @@ body {
 
 	// .presentation__title
 	&__title {
-		@include textDecor (Exo, 80, 700, 0.87, uppercase);
+		@include textDecor (Exo, 80px, 700, 0.87, uppercase);
 		@include adaptiveValue ("font-size", 80, 32, 0, 1200, 768);
 	}
 	// .presentation__text
