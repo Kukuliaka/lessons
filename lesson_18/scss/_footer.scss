@@ -1,0 +1,17 @@
+
+.footer {
+	@extend %blackTheme;
+	@include textDecor (Exo, 18, 600, 1.25, normal);
+	padding: $padding-block;
+	text-align: center;
+	// .footer__container
+
+	&__container {
+	}
+
+	// .footer__logo
+
+	&__logo {
+		
+	}
+}
