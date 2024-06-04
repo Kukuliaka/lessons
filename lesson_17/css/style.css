@@ -72,14 +72,17 @@ main {
 	.section-style__box {
 		display: grid;
 		gap: 20px;
-		grid-template-columns: 40% 20% 40%;
-		grid-template-rows: repeat(2, 289px);
+		grid-template-columns: 1fr 23% 1fr; /* size cards 36% 61% */
+		grid-template-rows: repeat(2, 1fr);
 		justify-content: center;
-		grid-auto-rows: 289px;
+	}
+	.section-style__item {
+		aspect-ratio: 407 / 289;
 	}
 	.section-style__item:nth-child(4n + 2),
 	.section-style__item:nth-child(4n - 1) {
 		grid-column: span 2;
+		aspect-ratio: 684 / 289;
 	}
 }
 @media(max-width: 991.98px) {
@@ -176,9 +179,7 @@ main {
 }
 .section-products__box {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, auto));
-	grid-template-rows: minmax(468px, auto);
-	grid-auto-rows: 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(258px, auto));/*! !!!!*/
 	gap: 30px;
 	justify-content: center;
 }
@@ -194,7 +195,7 @@ main {
 	display: grid;
 	height: 100%;
 	grid-template-columns: 1fr;
-	grid-template-rows: minmax(170px, auto)  1fr auto;
+	grid-template-rows: minmax(170px, auto) 1fr auto;
 	gap: 20px;
 }
 @media (any-hover: hover) {
@@ -278,7 +279,7 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: linear 0.3s;
+	transition: 0.3s;
 }
 .section-products__icon img {
 	width: 50%;
