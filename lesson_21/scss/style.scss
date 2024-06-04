@@ -1,0 +1,117 @@
+// Для матетатических вычислений
+@use "sass:math";
+// Подключаем стили обнуления 
+@import "_reset.scss";
+
+
+// Основные стили 
+
+body {
+	font-family: Arial, sans-serif;
+	
+}
+[class*=__container] {
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 0px 15px;
+	overflow: hidden;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	
+}
+
+.header {
+	color: #fff;
+	font-size: 24px;
+	background-color: #000;
+	padding: 20px 0px;
+	font-weight: 700;
+	// .header__container
+
+	&__container {
+	}
+
+	// .header__title
+
+	&__title {
+		text-align: center;
+	}
+}
+
+.page {
+	flex-grow: 1;
+	section:not(:last-child) {
+		border-bottom: 2px dashed #696868;
+	}
+	// .page__container
+
+	&__container {
+	}
+	&__text {
+		padding: 15px;
+		font-size: 18px;
+		font-weight: 700;
+	}
+}
+.problem {
+	padding: 20px 0px;
+
+	// .problem__title
+	&__title {
+		padding: 15px;
+		margin: 0px 0px 20px 0px;
+		font-size: 20px;
+		background: #bcbbbb;
+	}
+
+	// .problem__subtitle
+
+	&__subtitle {
+		margin: 0px 0px 10px 0px;
+	}
+
+	// .problem__list
+
+	&__list {
+		margin: 0px 0px 10px 0px;
+		& li:not(:last-child) {
+			margin: 0px 0px 5px 0px;
+		}
+	}
+
+	// .problem__item
+
+	&__item {
+	}
+
+	// .problem__answer
+
+	&__answer {
+		font-size: 18px;
+		line-height: 1.4;
+		background: #bcbbbb;
+		padding: 15px;
+	}
+}
+
+
+.footer {
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	background-color: #000;
+	padding: 15px 0px;
+	font-weight: 700;
+	// .footer__container
+
+	&__container {
+	}
+
+	// .footer__logo
+
+	&__logo {
+	}
+}

@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  line-height: 1;
+  height: 100%;
+}
+
+/* FORM */
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+[class*=__container] {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0px 15px;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+
+.header {
+  color: #fff;
+  font-size: 24px;
+  background-color: #000;
+  padding: 20px 0px;
+  font-weight: 700;
+}
+.header__title {
+  text-align: center;
+}
+
+.page {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.page section:not(:last-child) {
+  border-bottom: 2px dashed #696868;
+}
+.page__text {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.problem {
+  padding: 20px 0px;
+}
+.problem__title {
+  padding: 15px;
+  margin: 0px 0px 20px 0px;
+  font-size: 20px;
+  background: #bcbbbb;
+}
+.problem__subtitle {
+  margin: 0px 0px 10px 0px;
+}
+.problem__list {
+  margin: 0px 0px 10px 0px;
+}
+.problem__list li:not(:last-child) {
+  margin: 0px 0px 5px 0px;
+}
+.problem__answer {
+  font-size: 18px;
+  line-height: 1.4;
+  background: #bcbbbb;
+  padding: 15px;
+}
+
+.footer {
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  background-color: #000;
+  padding: 15px 0px;
+  font-weight: 700;
+}
