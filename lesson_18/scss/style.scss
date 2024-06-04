@@ -20,7 +20,6 @@
 @import "_footer.scss";
 
 
-
 // Основные стили 
 
 body {
@@ -208,6 +207,7 @@ body {
 			align-self: center;
 		}
 	}
+
 	// .picture-presentation__lightning-left
 	&__lightning-left {
 		position: absolute;
@@ -221,7 +221,6 @@ body {
 			object-fit: contain;
 		}
 		@media (max-width: 767.98px) {
-		
 			left: 40%;
 			width: 65%;
 		}
@@ -231,12 +230,10 @@ body {
 			width: 75%;
 		}
 		@media (max-width: 479.98px) {
-		
 			left: 20%;
 			width: 90%;
 		}
 		@media (max-width: 420px) {
-		
 			left: 15%;
 			width: 100%;
 		}
@@ -244,15 +241,11 @@ body {
 			left: 8%;
 			width: 110%;
 		}
-		
-
 	}
 
 	// .picture-presentation__lightning-right
-
 	&__lightning-right {
 		position: absolute;
-		// top: 50%;
 		bottom: 0;
 		right: -5%;
 		width: 45%;
@@ -268,14 +261,12 @@ body {
 	}
 
 	// .picture-presentation__cube-left
-
 	&__cube-left {
 		position: absolute;
 		transform: rotate(-45deg);
 		top: 20%;
 		left: 5%;
 		width: 17.2%;
-		// height: 136px;
 		& img {
 			width: 100%;
 			height: 100%;
@@ -291,8 +282,8 @@ body {
 			width: 25%;
 		}
 	}
-	// .picture-presentation__cube-right
 
+	// .picture-presentation__cube-right
 	&__cube-right {
 		position: absolute;
 		transform: rotate(30deg);
@@ -315,7 +306,6 @@ body {
 	}
 }
 
-
 .about {
 	@extend %blackTheme;
 	@include adaptiveValue ("padding-top", 120, 40, 0, 1300, 768);
@@ -334,6 +324,7 @@ body {
 		opacity: 0.93;
 		position: absolute;
 	}
+
 	// .about__container
 	&__container {
 		max-width: 100vw;
@@ -343,16 +334,13 @@ body {
 		flex-direction: column;
 		align-items: center;
 	}
-	
-	// .about__title
 
+	// .about__title
 	&__title {
 		margin: 0px 0px 20px 0px;
-
 	}
 
 	// .about__text
-
 	&__text {
 		@include textDecor (Exo, 18px, 400, 2.22, capitalize);
 		text-align: center;
@@ -369,14 +357,12 @@ body {
 	}
 
 	// .about__list
-
 	&__list {
 		@include textDecor (Orbitron, 20px, 500, 1.25, capitalize);
 		display: flex;
 		column-gap: 60px;
 		justify-content: space-between;
 		animation: running-lane 8s linear infinite;
-	
 		& li:not(:last-child) {
 			margin: 0px 60px 0px 0px;
 		}
@@ -384,11 +370,9 @@ body {
 			font-size: 14px;
 			line-height: 1.07;
 		}
-
 	}
 
 	// .about__item
-
 	&__item {
 		white-space: nowrap;
 		position: relative;
@@ -401,7 +385,6 @@ body {
 			position: absolute;
 			top: 10px;
 			right: -40%;
-		
 		}
 		@media (max-width: 767.98px) {
 			&::after {
@@ -410,26 +393,27 @@ body {
 			}
 		}
 	}
-
 }
+
 .title {
 	@include textDecor (Exo, 60px, 700, 1.17, uppercase);
 	@include adaptiveValue ("font-size", 60, 24, 0, 1300, 768);
 	display: inline-block;
 	&::after {
 		content: "";
-		width: 133%;
+		width: 132%;
 		height: 1px;
 		background: linear-gradient(90deg, #F00 0%, #42FF00 48.9%, #2400FF 100%);
 		margin: 20px 0px 0px 0px;
 		display: block;
-		margin-left: -16%;
+		
 	}
 }
 .title--center {
-	// text-align: center;
+	&::after {
+		margin-left: -16%;
+	}
 }
-
 .video {
 	background: url("../img/main/background_2.webp") 100px 38% no-repeat;
 	background-size: cover;
@@ -446,66 +430,71 @@ body {
 		top: 0;
 		left: 0;
 	}
-
 	
 	// .video__container
 	&__container{
 		position: relative;
 		z-index: 4;
 	}
-	// .video__title
 
+	// .video__title
 	&__title {
-		
 		@include adaptiveValue ("margin-bottom", 120, 20, 0, 1300, 767.98);
 	}
 
 	// .video__lane
-
 	&__lane {
 	}
 
 	// .video__list
-
 	&__list {
 		display: flex;
 		overflow-x: auto;
-		
+		overflow-y: hidden;
 		@include adaptiveValue ("gap", 40, 20, 0, 1300, 767.98);
 	}
 
 	// .video__item
-
 	&__item {
+		position: relative;
 		display: flex;
 		flex-direction: column;
-		gap: 40px;
+		@include adaptiveValue ("gap", 40, 20, 0, 1300, 767.98);
 		align-items: center;
 		flex: 1 0 28%;
-	
-		@media (max-width: 767.98px) {
-			flex: 1 0 40%;
-			gap: 20px;
-		}
-		@media (max-width: 491.98px) {
-			flex: 1 0 55%;
-		}
+		min-width: 193px;
 		& img {
 			width: 100%;
 			height: 100%;
 			aspect-ratio: 360 /	360;
 			object-fit: cover;
-		
 		}
-	
 	}
+
+	// .video__icon
+	&__icon {
+		position: absolute;
+		@include adaptiveValue ("width", 100, 53, 0, 1300, 768);
+		@include adaptiveValue ("height", 100, 53, 0, 1300, 768);
+		transition: 0.3s;
+		top: 35%; // не зразумела, чаму не цэтруецца пры 50% ??
+		left: 35%; // не зразумела, чаму не цэтруецца пры 50% ??
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			aspect-ratio: 100 / 100;
+		}
+	}
+
+	// .video__link
 	&__link {
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		gap: 40px;
 		align-items: center;
 		transition: all 0.3s;
+		border: 8px solid transparent;
 		&::before {
 			content: "";
 			background: #000;
@@ -517,35 +506,19 @@ body {
 			opacity: 0;
 			transition: opacity 0.3s;
 		}
-		&::after {
-			content: url("../img/main/video_icon.svg");
-			// background: url("../img/main/video_icon.svg") no-repeat;
-			// block-size: contain;
-			object-fit: contain;
-			position: absolute;
-			top: 35%;
-			left: 35%;
-			transition: transform 0.3s;
-			@include adaptiveValue ("width", 100, 53, 0, 1300, 768);
-			@include adaptiveValue ("height", 100, 53, 0, 1300, 768);
-			// width: 100px;
-			// height: 100px;
-		
-			@media (max-width: 767.98px) {
-				// width: 30px;
-				// height: 30px;
-				// object-fit: contain;
-			}
-		}
+
 		& span {
 			@include textDecor (Exo, 40px, 700, 1, uppercase);
 			position: absolute;
-			bottom: 80px;
+			bottom: 100px;
 			visibility: hidden;
 		}
+		
 		@media (any-hover: hover) {
 			&:hover span {
+				transition: 0.4s;
 				visibility: visible;
+				bottom: 60px;
 			}
 			&:hover {
 				border: 8px solid #6F00A9;
@@ -553,15 +526,13 @@ body {
 			&:hover::before {
 				opacity: 0.5;
 			}
-			&:hover::after {
-				transform: translateY(-20%);
-				
+			&:hover .video__icon {
+				top: 25%;
 			}
 		}
 	}
-
+	
 	// .video__label
-
 	&__label {
 		@include textDecor (Exo, 40px, 700, 1.1, uppercase);
 		@include adaptiveValue ("font-size", 40, 14, 0, 1300, 320);

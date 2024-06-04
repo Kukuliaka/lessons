@@ -311,10 +311,7 @@ textarea {
     z-index: 2;
   }
 }
-.menu-open .menu-header__list {
-  right: 0;
-}
-.menu-open .menu-header__list::before {
+.menu-open .menu-header__list, .menu-open .menu-header__list::before {
   right: 0;
 }
 .menu-header__link {
@@ -975,12 +972,15 @@ body {
 }
 .title::after {
   content: "";
-  width: 133%;
+  width: 132%;
   height: 1px;
   background: -webkit-gradient(linear, left top, right top, from(#F00), color-stop(48.9%, #42FF00), to(#2400FF));
   background: linear-gradient(90deg, #F00 0%, #42FF00 48.9%, #2400FF 100%);
   margin: 20px 0px 0px 0px;
   display: block;
+}
+
+.title--center::after {
   margin-left: -16%;
 }
 
@@ -1074,6 +1074,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   overflow-x: auto;
+  overflow-y: hidden;
 }
 @media (min-width: 81.25em) {
   .video__list {
@@ -1098,6 +1099,7 @@ body {
   }
 }
 .video__item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1105,27 +1107,34 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 40px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 28%;
           flex: 1 0 28%;
+  min-width: 193px;
 }
-@media (max-width: 767.98px) {
+@media (min-width: 81.25em) {
   .video__item {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 40%;
-            flex: 1 0 40%;
-    gap: 20px;
+    gap: 2.5rem;
   }
 }
-@media (max-width: 491.98px) {
+@media (min-width: 47.99875em) and (max-width: 81.25em) {
+  @supports (gap: clamp( 1.25rem , -0.5543964513rem  +  3.7592571708vw , 2.5rem )) {
+    .video__item {
+      gap: clamp( 1.25rem , -0.5543964513rem  +  3.7592571708vw , 2.5rem );
+    }
+  }
+  @supports not (gap: clamp( 1.25rem , -0.5543964513rem  +  3.7592571708vw , 2.5rem )) {
+    .video__item {
+      gap: calc(1.25rem + 1.25 * (100vw - 47.99875rem) / 33.25125);
+    }
+  }
+}
+@media (max-width: 47.99875em) {
   .video__item {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 55%;
-            flex: 1 0 55%;
+    gap: 1.25rem;
   }
 }
 .video__item img {
@@ -1134,6 +1143,64 @@ body {
   aspect-ratio: 360/360;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.video__icon {
+  position: absolute;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  top: 35%;
+  left: 35%;
+}
+@media (min-width: 81.25em) {
+  .video__icon {
+    width: 6.25rem;
+  }
+}
+@media (min-width: 48em) and (max-width: 81.25em) {
+  @supports (width: clamp( 3.3125rem , -0.9281015038rem  +  8.8345864662vw , 6.25rem )) {
+    .video__icon {
+      width: clamp( 3.3125rem , -0.9281015038rem  +  8.8345864662vw , 6.25rem );
+    }
+  }
+  @supports not (width: clamp( 3.3125rem , -0.9281015038rem  +  8.8345864662vw , 6.25rem )) {
+    .video__icon {
+      width: calc(3.3125rem + 2.9375 * (100vw - 48rem) / 33.25);
+    }
+  }
+}
+@media (max-width: 48em) {
+  .video__icon {
+    width: 3.3125rem;
+  }
+}
+@media (min-width: 81.25em) {
+  .video__icon {
+    height: 6.25rem;
+  }
+}
+@media (min-width: 48em) and (max-width: 81.25em) {
+  @supports (height: clamp( 3.3125rem , -0.9281015038rem  +  8.8345864662vw , 6.25rem )) {
+    .video__icon {
+      height: clamp( 3.3125rem , -0.9281015038rem  +  8.8345864662vw , 6.25rem );
+    }
+  }
+  @supports not (height: clamp( 3.3125rem , -0.9281015038rem  +  8.8345864662vw , 6.25rem )) {
+    .video__icon {
+      height: calc(3.3125rem + 2.9375 * (100vw - 48rem) / 33.25);
+    }
+  }
+}
+@media (max-width: 48em) {
+  .video__icon {
+    height: 3.3125rem;
+  }
+}
+.video__icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  aspect-ratio: 100/100;
 }
 .video__link {
   position: relative;
@@ -1144,12 +1211,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 40px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  border: 8px solid transparent;
 }
 .video__link::before {
   content: "";
@@ -1163,62 +1230,6 @@ body {
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
-.video__link::after {
-  content: url("../img/main/video_icon.svg");
-  -o-object-fit: contain;
-     object-fit: contain;
-  position: absolute;
-  top: 35%;
-  left: 35%;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-}
-@media (min-width: 81.25em) {
-  .video__link::after {
-    width: 6.25rem;
-  }
-}
-@media (min-width: 48em) and (max-width: 81.25em) {
-  @supports (width: clamp( 3.3125rem , -0.9281015038rem  +  8.8345864662vw , 6.25rem )) {
-    .video__link::after {
-      width: clamp( 3.3125rem , -0.9281015038rem  +  8.8345864662vw , 6.25rem );
-    }
-  }
-  @supports not (width: clamp( 3.3125rem , -0.9281015038rem  +  8.8345864662vw , 6.25rem )) {
-    .video__link::after {
-      width: calc(3.3125rem + 2.9375 * (100vw - 48rem) / 33.25);
-    }
-  }
-}
-@media (max-width: 48em) {
-  .video__link::after {
-    width: 3.3125rem;
-  }
-}
-@media (min-width: 81.25em) {
-  .video__link::after {
-    height: 6.25rem;
-  }
-}
-@media (min-width: 48em) and (max-width: 81.25em) {
-  @supports (height: clamp( 3.3125rem , -0.9281015038rem  +  8.8345864662vw , 6.25rem )) {
-    .video__link::after {
-      height: clamp( 3.3125rem , -0.9281015038rem  +  8.8345864662vw , 6.25rem );
-    }
-  }
-  @supports not (height: clamp( 3.3125rem , -0.9281015038rem  +  8.8345864662vw , 6.25rem )) {
-    .video__link::after {
-      height: calc(3.3125rem + 2.9375 * (100vw - 48rem) / 33.25);
-    }
-  }
-}
-@media (max-width: 48em) {
-  .video__link::after {
-    height: 3.3125rem;
-  }
-}
 .video__link span {
   font-family: Exo;
   font-size: 40px;
@@ -1226,12 +1237,15 @@ body {
   line-height: 1;
   text-transform: uppercase;
   position: absolute;
-  bottom: 80px;
+  bottom: 100px;
   visibility: hidden;
 }
 @media (any-hover: hover) {
   .video__link:hover span {
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
     visibility: visible;
+    bottom: 60px;
   }
   .video__link:hover {
     border: 8px solid #6F00A9;
@@ -1239,10 +1253,8 @@ body {
   .video__link:hover::before {
     opacity: 0.5;
   }
-  .video__link:hover::after {
-    -webkit-transform: translateY(-20%);
-        -ms-transform: translateY(-20%);
-            transform: translateY(-20%);
+  .video__link:hover .video__icon {
+    top: 25%;
   }
 }
 .video__label {
