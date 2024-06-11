@@ -1,0 +1,28 @@
+
+
+.header {
+	background-color: var(--bg-color);
+	font-family: 'AmstelvarAlpha', serif;
+	text-transform: uppercase;
+	font-size: toRem(28);
+	line-height: 1.2;
+	color: var(--text-color);
+	border-bottom: 1px solid #e1dddd;
+	min-height: var(--header-height);
+	display: flex;
+	align-items: center;
+	padding-top: toRem(10);
+	padding-bottom: toRem(10);
+	
+	// .header__container
+	&__container {}
+
+	// .header__logo
+	&__logo {
+		display: flex;
+		gap: toRem(10);
+		text-align: center;
+		justify-content: center;
+	}
+}
+

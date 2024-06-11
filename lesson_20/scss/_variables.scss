@@ -1,0 +1,19 @@
+
+// Шаблоны
+
+
+
+// Переменные
+
+
+$containerWidth: 1350px;
+
+:root {
+	--text-color: #000;
+	--second-text-color: #fff;
+	--hover-text-color: rgb(255, 111, 97);
+	--bg-color: rgb(244, 244, 245);
+	--second-bg-color: #000;
+	--hover-bg-color: rgb(255, 111, 97);
+	--header-height: clamp(4.375rem, 3.322rem + 5.26vw, 7.5rem);
+}

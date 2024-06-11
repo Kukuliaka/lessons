@@ -1,0 +1,26 @@
+
+.footer {
+	@include adaptiveValue ("padding-bottom", 80, 15, 0, 1350, 320);
+	@include adaptiveValue ("padding-top", 60, 15, 0, 1350, 320);
+
+	// .footer__container
+	&__container {
+		display: flex;
+		gap: toRem(10);
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: 34.375em) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	// .footer__logo
+	&__logo {
+		width: toRem(200);
+		& img {
+			width: 100%;
+			object-fit: contain;
+		}
+	}
+}
