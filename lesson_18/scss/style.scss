@@ -400,7 +400,7 @@ body {
 	@include textDecor (Exo, 60px, 700, 1.17, uppercase);
 	@include adaptiveValue ("font-size", 60, 24, 0, 1300, 768);
 	display: inline-block;
-	padding-inline: 40px;
+	padding-right: 40px;
 	overflow: hidden;
 	&::after {
 		content: "";
@@ -413,6 +413,7 @@ body {
 	}
 	&--center {
 		text-align: center;
+		padding-inline: 40px;
 		&::after {
 			margin-left: -16%;
 		}
