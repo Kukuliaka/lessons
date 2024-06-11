@@ -392,11 +392,11 @@ textarea {
     background-color: var(--hover-bg-color);
   }
 }
-@media (max-width: 47.99875em) {
+@media (max-width: 37.5em) {
   .collections__link {
-    padding-inline: 0.9375rem;
-    padding-block: 0.875rem;
-    font-size: 1.125rem;
+    padding-inline: 1.0625rem;
+    padding-block: 0.9375rem;
+    font-size: 1.25rem;
   }
 }
 .collections__image {

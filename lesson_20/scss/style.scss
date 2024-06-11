@@ -130,10 +130,10 @@
 				background-color: var(--hover-bg-color);
 			}
 		}
-		@media (max-width: toEm(767.98)) {
-			padding-inline: toRem(15);
-			padding-block: toRem(14);
-			font-size: toRem(18);
+		@media (max-width: toEm(600)) {
+			padding-inline: toRem(17);
+			padding-block: toRem(15);
+			font-size: toRem(20);
 		}
 	}
 
