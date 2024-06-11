@@ -948,7 +948,7 @@ body {
   line-height: 1.17;
   text-transform: uppercase;
   display: inline-block;
-  padding-inline: 40px;
+  padding-right: 40px;
   overflow: hidden;
 }
 @media (min-width: 81.25em) {
@@ -985,6 +985,7 @@ body {
 }
 .title--center {
   text-align: center;
+  padding-inline: 40px;
 }
 .title--center::after {
   margin-left: -16%;
