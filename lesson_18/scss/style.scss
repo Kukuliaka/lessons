@@ -26,7 +26,7 @@ body {
 	font-family: Exo, sans-serif;
 }
 [class*=__container] {
-	max-width: 1300px;
+	max-width: $containerWidth;
 	margin: 0 auto;
 	padding: 0px 15px;
 	overflow: hidden;
@@ -333,6 +333,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		overflow: hidden;
 	}
 
 	// .about__title
@@ -399,19 +400,22 @@ body {
 	@include textDecor (Exo, 60px, 700, 1.17, uppercase);
 	@include adaptiveValue ("font-size", 60, 24, 0, 1300, 768);
 	display: inline-block;
+	padding-inline: 40px;
+	overflow: hidden;
 	&::after {
 		content: "";
-		width: 132%;
+		width: 133%;
 		height: 1px;
 		background: linear-gradient(90deg, #F00 0%, #42FF00 48.9%, #2400FF 100%);
 		margin: 20px 0px 0px 0px;
 		display: block;
-		
+		padding-inline: 20px;
 	}
-}
-.title--center {
-	&::after {
-		margin-left: -16%;
+	&--center {
+		text-align: center;
+		&::after {
+			margin-left: -16%;
+		}
 	}
 }
 .video {
@@ -515,19 +519,19 @@ body {
 		}
 		
 		@media (any-hover: hover) {
-			&:hover span {
-				transition: 0.4s;
-				visibility: visible;
-				bottom: 60px;
-			}
 			&:hover {
 				border: 8px solid #6F00A9;
-			}
-			&:hover::before {
-				opacity: 0.5;
-			}
-			&:hover .video__icon {
-				top: 25%;
+				& span {
+					transition: 0.4s;
+					visibility: visible;
+					bottom: 60px;
+				}
+				&::before {
+					opacity: 0.5;
+				}
+				& .video__icon {
+					top: 25%;
+				}
 			}
 		}
 	}

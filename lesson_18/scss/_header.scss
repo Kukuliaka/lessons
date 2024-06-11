@@ -19,7 +19,7 @@
 		justify-content: space-between;
 		align-items: center;
 		@media (max-width: 767.98px) {
-			padding: 0px 20px;
+			padding: $padding-inline;
 		}
 	}
 
@@ -71,18 +71,22 @@
 		top: -10px;
 		transition: 0.3s;
 	}
+	
+	.menu-open & {
+		&::before {
+			transform: rotate(45deg);
+		}
+		&::after {
+			display: none;
+		}
+		span::after {
+			transform: rotate(-45deg);
+			top: 0;
+		}
+	}
+
 	@media (max-width: 767.98px) {
 		display: block;
-	}
-	.menu-open &::before {
-		transform: rotate(45deg);
-	}
-	.menu-open &::after {
-		display: none;
-	}
-	.menu-open & span::after {
-		transform: rotate(-45deg);
-		top: 0;
 	}
 }
 
