@@ -1,0 +1,129 @@
+// Для матетатических вычислений
+@use "sass:math";
+// Подключаем стили обнуления 
+@import "_reset.scss";
+// Подключаем файл миксинов
+@import "_mixins.scss";
+
+
+// Основные стили 
+
+body {
+	font-family: Arial, sans-serif;
+	
+}
+[class*=__container] {
+	max-width: toRem(1100);
+	margin: 0 auto;
+	padding-inline: toRem(15);
+	overflow: hidden;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	
+}
+
+.header {
+	color: #fff;
+	font-size: toRem(24);
+	background-color: #000;
+	padding-block: toRem(20);
+	font-weight: 700;
+	// .header__container
+
+	&__container {
+	}
+
+	// .header__title
+
+	&__title {
+		text-align: center;
+	}
+}
+
+.page {
+	flex-grow: 1;
+	section:not(:last-child) {
+		border-bottom: 2px dashed #696868;
+	}
+	// .page__container
+
+	&__container {
+	}
+	&__text {
+		text-align: center;
+		padding: toRem(15);
+		font-size: toRem(18);
+		font-weight: 700;
+	}
+}
+.problem {
+	padding-block: toRem(20);
+
+	// .problem__title
+	&__title {
+		padding: toRem(15);
+		margin-bottom: toRem(20);
+		font-size: toRem(20);
+		background: #bcbbbb;
+	}
+
+	// .problem__subtitle
+
+	&__subtitle {
+		margin-bottom: toRem(10);
+	}
+
+	// .problem__task
+	&__task {
+		font-size: toRem(18);
+		white-space: pre-wrap;
+		word-break: break-all;
+		background: #dedede;
+		
+	}
+	// .problem__list
+
+	&__list {
+		margin-bottom: toRem(10);
+		& li:not(:last-child) {
+			margin-bottom: toRem(5);
+		}
+	}
+
+	// .problem__item
+
+	&__item {
+	}
+
+	// .problem__answer
+
+	&__answer {
+		font-size: toRem(18);
+		line-height: 1.4;
+		background: #c5cbed;
+	
+		padding: toRem(15);
+	}
+}
+
+
+.footer {
+	text-align: center;
+	font-size: toRem(14);
+	color: #fff;
+	background-color: #000;
+	padding-block: toRem(15);
+	font-weight: 700;
+	// .footer__container
+
+	&__container {
+	}
+
+	// .footer__logo
+
+	&__logo {
+	}
+}

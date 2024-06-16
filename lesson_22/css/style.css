@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  line-height: 1;
+  height: 100%;
+}
+
+/* FORM */
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+[class*=__container] {
+  max-width: 68.75rem;
+  margin: 0 auto;
+  padding-inline: 0.9375rem;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+
+.header {
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: #000;
+  padding-block: 1.25rem;
+  font-weight: 700;
+}
+.header__title {
+  text-align: center;
+}
+
+.page {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.page section:not(:last-child) {
+  border-bottom: 2px dashed #696868;
+}
+.page__text {
+  text-align: center;
+  padding: 0.9375rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.problem {
+  padding-block: 1.25rem;
+}
+.problem__title {
+  padding: 0.9375rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
+  background: #bcbbbb;
+}
+.problem__subtitle {
+  margin-bottom: 0.625rem;
+}
+.problem__task {
+  font-size: 1.125rem;
+  white-space: pre-wrap;
+  word-break: break-all;
+  background: #dedede;
+}
+.problem__list {
+  margin-bottom: 0.625rem;
+}
+.problem__list li:not(:last-child) {
+  margin-bottom: 0.3125rem;
+}
+.problem__answer {
+  font-size: 1.125rem;
+  line-height: 1.4;
+  background: #c5cbed;
+  padding: 0.9375rem;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #fff;
+  background-color: #000;
+  padding-block: 0.9375rem;
+  font-weight: 700;
+}
