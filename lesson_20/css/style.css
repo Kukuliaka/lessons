@@ -94,7 +94,7 @@ textarea {
 
 .header {
   background-color: var(--bg-color);
-  font-family: "AmstelvarAlpha", Arial, serif;
+  font-family: "AmstelvarAlpha", serif;
   text-transform: uppercase;
   font-size: 1.75rem;
   line-height: 1.2;
