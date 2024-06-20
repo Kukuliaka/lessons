@@ -124,8 +124,8 @@ console.log(listElements)
 
 listElements.forEach((listElement, index) => {
 	console.log(listElement.innerHTML)
-	listElement.innerHTML = `Hello, guy ${index}`
-	// listElement.textContent = '<span>Hello</span>'
+	listElement.textContent = `Hello, guy ${index}`
+	// listElement.innerHTML = '<span>Hello</span>'
 })
 
 const list = document.querySelector('.list')
