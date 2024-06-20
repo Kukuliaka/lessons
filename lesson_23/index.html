@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+	<head>
+		<!-- Кодирование текста -->
+		<meta charset="UTF-8">
+		<!-- Настройки вьюпорта (адаптива, масштаба) -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Подключение отдельного файла стилей -->
+		<link rel="stylesheet" href="css/style.css">
+		<!-- Заголовок страницы в браузере -->
+		<title>Lesson 23</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+					<h1 class="header__title">
+						Урок №23 (Основи JavaScript. Частина №3)
+					</h1>
+				</div>
+			</header>
+			<main class="page">
+				<div class="page__container">
+					<section class="problem">
+						<h2 class="problem__title">
+							Задача №1
+						</h2>
+						<p class="problem__subtitle">
+							Отримати в константу елемент &lt;body&gt;
+						</p>
+						<div class="problem__answer">
+							Відповідь:
+							<pre>
+								<code>
+									const bodyElement = document.body
+								</code>
+							</pre>
+						</div>
+					</section>
+					<section class="problem">
+						<h2 class="problem__title">
+							Задача №2
+						</h2>
+						<p class="problem__subtitle">
+							Написати функцію, яка додає в &lt;body&gt; список UL з певною кількістю
+							LI
+						</p>
+						<p class="problem__subtitle">
+							(кількість має передаватись як параметр функції, також мати значення
+							за замовченням)
+						</p>
+
+						<div class="problem__answer">
+							Відповідь:
+							<pre>
+							<code>
+								function addUlToBody(n = 4) {
+									const someList = document.createElement('ul')
+									if (n === Number && n !== 0) return
+									for (let i = 0; i &lt; n; ++i) {
+										someList.innerHTML += `&lt;li>Пункт №${i + 1}&lt;/li>`
+									}
+									bodyElement.insertAdjacentElement("beforebegin", someList)
+								}
+								addUlToBody(8)
+							</code>
+						</pre>
+						</div>
+					</section>
+					<section class="problem">
+						<h2 class="problem__title">
+							Задача №3
+						</h2>
+						<p class="problem__subtitle">
+							Додати до елементу &lt;body&gt; класс loaded.
+						</p>
+						<p class="problem__subtitle">
+							Потім перевірити чи є клас loaded у елемента &lt;body&gt;
+						</p>
+						<p class="problem__subtitle">
+							і, якщо є, додати стиль кольору тексту зелений.
+						</p>
+						<div class="problem__answer">
+							Відповідь:
+							<pre>
+								<code>
+									const bodyElement = document.body
+									const colorFont = bodyElement.color
+									bodyElement.classList.add('loaded')
+									if (bodyElement.classList.contains('loaded')) {
+										console.log('loaded is')
+										bodyElement.style.color = `green`
+									}
+								</code>
+							</pre>
+						</div>
+					</section>
+					<section class="problem">
+						<h2 class="problem__title">
+							Задача №4
+						</h2>
+						<p class="problem__subtitle">
+							Дано в html: три елементи з класом item.
+						</p>
+						<p class="problem__subtitle">
+							Треба отримати ці елементи в константу, кожному додати клас active,
+						</p>
+						<p class="problem__subtitle">
+							та перезаписати контент всередені кожного елемента на
+							"Елемент №(тут порядковий номер елементу починаючи з 1)".
+						</p>
+						<div class="problem__answer">
+							Відповідь:
+							<pre>
+								<code>
+									const itemElements = document.querySelectorAll('.item')
+									const itemElement = document.querySelector('.item')
+									itemElements.forEach((itemElement, index) => {
+										itemElement.classList.add('active')
+										itemElement.textContent = `Елемент №${index + 1}`
+									})
+								</code>
+							</pre>
+						</div>
+					</section>
+					<section class="problem">
+						<h2 class="problem__title">
+							Задача №5
+						</h2>
+						<p class="problem__subtitle">
+							Дано в html: текст, далі кнопка з класом button.
+						</p>
+						<p class="problem__subtitle">
+							Треба прокрутити скрол сторінки до кнопки
+						</p>
+						<div class="problem__answer">
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sit odit
+								laborum minus assumenda voluptate facere beatae accusantium, dolorem
+								nemo, amet fugiat ad obcaecati non neque pariatur quisquam laudantium
+								exercitationem cum iste veniam nostrum minima? Atque dolorem laborum ad
+								tenetur numquam. Et quas nesciunt quis sed in quia ducimus possimus
+								accusamus. Reprehenderit recusandae eaque magnam, quo ipsa dolorem
+								molestiae porro fugit dolores est repudiandae atque ea velit consequatur
+								voluptatibus natus dicta omnis, vero cupiditate eum debitis, eligendi
+								assumenda nobis repellendus? Earum soluta, iusto nisi ad enim at
+								praesentium unde! Ea voluptatum qui cum repellendus tempora aliquid quam
+								autem? Adipisci laborum animi amet explicabo, consequuntur deserunt, at
+								iste quos est voluptas, nisi iusto doloremque fugit similique culpa
+								quasi in illum? Ad est soluta modi minus similique, rerum eius quae.
+								Obcaecati dolor id maiores quam recusandae iste nam aliquam cupiditate
+								illo quod quasi eligendi ullam vero doloremque magni, amet
+								necessitatibus perspiciatis blanditiis! Minima explicabo, dolore quos
+								possimus eos aut libero quam hic ducimus officiis odio reprehenderit
+								dicta ipsam, sunt fuga autem quasi fugiat earum itaque qui. Hic quisquam
+								alias tenetur quasi modi est incidunt eveniet saepe dolor vitae
+								repellendus esse, suscipit doloribus vero rerum, nesciunt quam officia
+								accusantium necessitatibus, iure sunt velit id. Earum, maiores? Ipsum
+								repudiandae ratione facere. Voluptas, aspernatur ipsum. Officia iusto
+								vel explicabo tempora provident ex cum quia atque quisquam? Maxime
+								fugiat veniam consequatur earum. Ratione deserunt dolores rem saepe nam
+								voluptates id ducimus nihil praesentium, hic magni temporibus natus
+								aperiam iure facilis nemo ullam sapiente corrupti at necessitatibus,
+								soluta, consequatur illum labore asperiores? Non eligendi possimus
+								perferendis illo reiciendis veritatis recusandae id ad nostrum optio
+								aliquid corrupti dignissimos aspernatur esse accusamus fugiat culpa sit,
+								enim dolorum rerum eius quam! Accusamus odit minima, in possimus id non
+								unde obcaecati iure modi eum magnam nostrum. Doloribus, veniam. Nihil
+								facere totam numquam impedit porro, quos quibusdam cupiditate ad nulla
+								est debitis distinctio corrupti perspiciatis aperiam voluptatibus
+								dolorem voluptate fugit? Quos nostrum hic vel, in eligendi consequatur
+								maxime deserunt fugiat necessitatibus eos autem iste dolores sed alias
+								minus a magni, accusamus eveniet itaque adipisci repellendus, similique
+								perferendis nemo cupiditate? Aperiam architecto rem autem quas quo
+								ducimus voluptas vitae, aspernatur iure officiis tenetur eum sapiente
+								cumque consectetur, quos dicta iste similique eveniet nihil! Ab nesciunt
+								earum libero esse aspernatur aperiam voluptate id dolores placeat hic,
+								repudiandae veniam quisquam, quam dolorum aliquam dignissimos vitae unde
+								porro excepturi nemo nostrum fugit in doloribus. Dolores nisi deserunt
+								eum veniam labore earum illum. Quos illo fugit repudiandae labore vel
+								molestiae sed? Placeat, voluptate tempore! Commodi beatae tempora eaque,
+								debitis assumenda eligendi earum saepe enim possimus quod et mollitia
+								quis? Incidunt ullam architecto cum dolore consectetur ea excepturi quo
+								optio veniam ipsum nobis corrupti hic harum perspiciatis, aut natus.
+								Repudiandae, labore! Pariatur ab cum laboriosam repellendus! Nemo alias
+								aspernatur quos provident nostrum ducimus sunt dicta fuga ab accusamus
+								doloremque, rerum suscipit. Repellendus eum eligendi, eos libero aliquam
+								nesciunt velit impedit, vitae pariatur deleniti, neque quos magni ipsa
+								dolor quaerat nobis minus assumenda ex laudantium omnis! Unde, magnam
+								repudiandae?
+							</p>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam tenetur
+								iure aut, magni temporibus tempora! Laborum voluptas tempore error animi
+								facere cum deleniti sequi officiis reiciendis ducimus et, possimus
+								voluptate consequuntur vero non? Quas debitis unde inventore rerum modi
+								quidem! Blanditiis, odio! Inventore commodi fuga deserunt ea, saepe
+								itaque quidem temporibus nobis cumque minima debitis? Soluta minus
+								tempore, saepe adipisci aliquid consectetur. Corrupti hic voluptates
+								distinctio labore molestiae ut sint? Aspernatur delectus molestias
+								excepturi ab aliquid fugiat et illo cupiditate fuga consequatur ex nemo,
+								non recusandae repudiandae possimus reiciendis, cumque obcaecati eius
+								error minima. Commodi natus amet ut inventore asperiores id
+								reprehenderit deserunt, veniam laudantium excepturi nulla? Adipisci enim
+								exercitationem, quaerat vitae eius magni ad possimus dolorem temporibus
+								facilis officia laudantium quam cum tempora pariatur nam expedita
+								accusantium aliquam vel ratione dolorum voluptatum cupiditate!
+								Architecto odio, dolores sequi mollitia sit temporibus ipsa doloribus
+								eveniet neque, excepturi omnis assumenda vel cum? Velit sequi eius, fuga
+								pariatur porro sunt quod culpa hic non consectetur ea aliquid, eligendi
+								architecto molestias assumenda corporis nesciunt iste enim ab
+								repellendus! Laboriosam corrupti modi quaerat molestiae at aspernatur
+								voluptatum illo, ipsum, cupiditate ullam quos? Esse voluptatibus,
+								ratione earum nemo distinctio expedita blanditiis in totam ipsum dolorum
+								hic delectus quibusdam dicta? Harum in laborum voluptatum dolorem
+								adipisci non, modi eligendi nisi ad blanditiis totam quis nam
+								consequatur obcaecati temporibus ipsam. Unde, eaque ut, minima non
+								quibusdam ipsa dicta qui quidem dolorum reprehenderit sequi itaque natus
+								nesciunt cum cupiditate deleniti culpa! Atque, fuga minima officia
+								dolorum mollitia libero eius pariatur ullam sit dolor consequuntur nam
+								tenetur dicta eaque accusamus optio tempora, aspernatur facere commodi
+								quos dignissimos incidunt suscipit a! Qui dolorem ipsa nihil commodi
+								beatae asperiores explicabo nobis in repellendus ullam? Cupiditate
+								dolorem quo omnis id explicabo enim a, architecto laboriosam, excepturi
+								ducimus sequi reiciendis officia blanditiis, accusamus quisquam
+								voluptatum voluptates dignissimos distinctio quidem? Iste ad dolores
+								numquam voluptas porro reprehenderit quae iure quam? Ab aut praesentium
+								tenetur quidem aspernatur repellendus cupiditate ea neque nostrum
+								doloribus voluptates, aliquid nobis ratione asperiores animi possimus
+								provident hic temporibus veritatis voluptatibus, officiis, consequatur
+								doloremque illo obcaecati! Asperiores at, quas omnis iure error
+								consectetur provident accusamus repellat autem, mollitia accusantium
+								saepe. Adipisci deserunt modi vitae, quibusdam accusantium animi debitis
+								non molestias, magni eligendi, quis odit sit odio! Cupiditate ab
+								accusamus quod. Quisquam quod quis cupiditate! Sed ab voluptatum, magnam
+								ut deserunt tempora quasi quia animi odit! Eum modi aspernatur minima
+								in! Reprehenderit excepturi alias dolorem ratione quisquam nisi pariatur
+								unde facilis quod atque nulla possimus fugit numquam, optio ipsum
+								laborum similique eos temporibus molestiae magni? Amet aspernatur soluta
+								assumenda quam. Nihil ipsam in amet dolorem laudantium? Praesentium iste
+								doloremque vero temporibus neque maxime quidem consequuntur officiis
+								commodi facilis assumenda, dolorum voluptas optio labore ipsum. Magni
+								ratione ut, fugiat minus illum assumenda iste tenetur rem delectus
+								doloribus. Optio temporibus facilis saepe, eius explicabo deleniti
+								dolorum vero veniam qui nemo voluptate autem reiciendis earum laboriosam
+								dignissimos consectetur minima laborum doloremque itaque modi iusto
+								quidem enim? Dignissimos tempore quam error quos blanditiis laborum hic
+								explicabo provident.
+							</p>
+							<button class="button" type="button">
+								я кнопка
+							</button>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ut fuga
+								minus impedit expedita atque deleniti eligendi aperiam distinctio
+								tempora reprehenderit maxime quis facere mollitia perferendis magnam
+								excepturi fugiat, cupiditate modi quaerat dicta maiores. Nobis numquam
+								veniam voluptates a voluptatem et debitis maxime odio cupiditate,
+								commodi sit quo accusamus quae omnis tempore incidunt unde. At eaque ex
+								odit expedita ipsum assumenda vel itaque eos consequatur, quis debitis,
+								optio quas ab dignissimos explicabo voluptate porro excepturi
+								consequuntur earum inventore sequi amet perferendis esse! Ipsum aut ea
+								eum. Est ab totam blanditiis aperiam? Nisi dolorem rerum enim assumenda
+								suscipit vel voluptates libero hic eos, delectus ex aliquid odio. Itaque
+								minima ullam fugit aspernatur optio nam ipsa non saepe iure dolorum
+								laboriosam provident repudiandae, eum assumenda iste incidunt voluptatum
+								magni architecto aliquam voluptates sunt porro? Porro consequuntur
+								inventore nihil voluptatem iure odio perspiciatis natus atque modi a?
+								Doloremque necessitatibus numquam voluptatum aliquam cupiditate itaque,
+								illum deserunt, iure error quas quam quis reiciendis nesciunt, saepe
+								enim nam labore voluptatibus consectetur praesentium voluptas.
+								Repellendus dolor esse, minus aperiam deleniti debitis maiores saepe
+								doloremque accusantium nam? Consectetur praesentium saepe, optio
+								officiis tempore ut possimus, aspernatur non excepturi in sequi ad eius
+								laborum fuga eos autem deserunt sapiente ab deleniti quaerat? Tempora
+								corporis libero doloremque at earum accusantium, nesciunt, excepturi
+								nostrum delectus magni quis voluptatem. Odit, quos incidunt eius porro
+								officia quibusdam voluptate fugiat? Molestias eos impedit maiores alias
+								quas. Quidem commodi quae distinctio. Laboriosam voluptas ad ipsam,
+								repellat veritatis architecto asperiores, facilis perspiciatis
+								voluptates totam provident beatae obcaecati ratione incidunt cumque,
+								eveniet natus illum aperiam. Obcaecati minima voluptates tempora
+								corrupti reiciendis cum. Fugit at laborum delectus sint commodi
+								repellendus reiciendis magnam culpa qui quod veniam ex, quia
+								reprehenderit sequi porro a, iure id vel adipisci voluptatibus. Tenetur
+								distinctio impedit repudiandae quidem. Perspiciatis dolores mollitia
+								illo dolor repellendus quae ipsam, quam praesentium expedita asperiores
+								est a suscipit odio temporibus. Cum eos distinctio tenetur corporis
+								maiores repudiandae laboriosam dolorem officia consequatur quod, eaque,
+								dolorum veritatis magnam sequi totam impedit commodi. Nesciunt inventore
+								nemo aliquam tempore quasi? Vel eaque enim corporis, autem nisi odit.
+								Amet consectetur, deserunt aut excepturi alias temporibus quo placeat
+								delectus sequi officia magni reprehenderit quibusdam numquam aspernatur
+								nisi illo impedit quia doloremque laudantium quidem voluptatum vel quos.
+								Voluptates saepe perspiciatis rem, similique reiciendis dicta deserunt
+								possimus nemo praesentium, iste explicabo nostrum fuga quo at in modi
+								porro ex totam maxime! Consequuntur est ad cupiditate? Nobis illo magnam
+								repellat suscipit itaque repudiandae architecto iusto. Reprehenderit,
+								sapiente. Placeat animi commodi molestiae ut hic, doloremque,
+								repudiandae maiores, impedit ex porro quia temporibus dolorum dolorem
+								eaque esse necessitatibus? Similique quibusdam fuga error impedit
+								blanditiis deleniti mollitia voluptates nihil minima, quis ea qui
+								laborum odio? In sit architecto repellendus aliquam nam, harum modi qui
+								impedit laudantium repellat cum cupiditate tempora iusto! Velit qui,
+								quaerat laborum quos impedit tempora quia? Autem dolorem adipisci hic,
+								qui nostrum cum ut reiciendis similique, dignissimos quas perspiciatis
+								labore voluptas illum animi illo? Modi ut sequi saepe ad enim,
+								asperiores minus voluptatum accusantium quibusdam dolorum rerum!
+							</p>
+							Відповідь:
+							<pre>
+								<code>
+									const button = document.querySelector('.button')
+									function scrollToBlock(element) {
+										element.scrollIntoView({
+											block: "end",
+											inline: "nearest",
+											behavior: "smooth"
+										})
+									}
+									scrollToBlock(button)
+								</code>
+							</pre>
+						</div>
+					</section>
+					<section class="problem">
+						<h2 class="problem__title">
+							Задача №6
+						</h2>
+						<p class="problem__subtitle">
+							Дано в html: посилання з класом link
+						</p>
+						<p class="problem__subtitle">
+							Треба додати до посилання дата атрибут зі значенням 100
+						</p>
+						<p class="problem__subtitle">
+							Потім отримати значення атрибуту,
+						</p>
+						<p class="problem__subtitle">
+							та, якщо значення меньше 200 пофарбувати колір тексту посилання в
+							червоний
+						</p>
+						<a href="#" class="link">я посилання</a>
+						<div class="problem__answer">
+							Відповідь:
+							<pre>
+								<code>
+									const link = document.querySelector('.link')
+									link.setAttribute('data', "100")
+									const linkAttribute = parseInt(link.getAttribute('data'))
+									if (linkAttribute &lt; 200) {
+										link.style.color = 'red'
+									}
+								</code>
+							</pre>
+						</div>
+					</section>
+					<ul class="list">
+						<li class="item">1</li>
+						<li class="item">2</li>
+						<li class="item">3</li>
+					</ul>
+					<p class="page__text">
+						опрацювання теорії та вирішення задач у файлі <mark>js/srript.js</mark>
+					</p>
+				</div>
+			</main>
+			<footer class="footer">
+				<div class="footer__container">
+					<div class="footer__logo">JavaScript 2024</div>
+				</div>
+			</footer>
+		</div>
+		<script src="js/srript.js"></script>
+	</body>
+
+</html>
