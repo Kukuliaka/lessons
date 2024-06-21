@@ -141,7 +141,7 @@ pageText.insertAdjacentElement("afterbegin", someObject)
 
 const windowWidth = window.innerWidth
 const windowHeight = window.innerHeight
-const windowClientWidth = bodyElement.ClientWidth
+const windowClientWidth = bodyElement.clientWidth
 const windowClientHeight = bodyElement.clientHeight
 console.log(windowWidth)
 console.log(windowHeight)
