@@ -404,6 +404,7 @@ main {
 	border: 1px solid #E3E2E2;
 	box-shadow: -3px 4px 15px 0px rgba(0, 0, 0, 0.06);
 	flex-basis: 300px;
+	max-width: 300px;
 	flex-shrink: 0;
 	overflow: clip;
 	justify-content: space-between;
