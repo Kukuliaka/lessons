@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<!-- Кодирование текста -->
+		<meta charset="UTF-8">
+		<!-- Настройки вьюпорта (адаптива, масштаба) -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Подключение отдельного файла стилей -->
+		<link rel="stylesheet" href="css/style.css">
+		<!-- Заголовок страницы в браузере -->
+
+		<title>Lesson 24</title>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container">
+					<h1 class="header__title">
+						Урок №24 (Основи JavaScript. Частина №4)
+					</h1>
+				</div>
+			</header>
+			<main class="page">
+				<div class="page__container">
+					<section class="problem">
+						<h2 class="problem__title">
+							Задача №1
+						</h2>
+						<p class="problem__subtitle">
+							Дано в html: три елементи з класом item.
+						</p>
+						<p class="problem__subtitle">
+							При кліку на кожен з елементів додати клас active,
+						</p>
+						<p class="problem__subtitle">
+							при повторному кліку прибрати клас
+						</p>
+						<div class="problem__answer">
+							Відповідь:
+							<a class="item" href="#">елемент №1</a>
+							<a class="item" href="#">елемент №2</a>
+							<a class="item" href="#">елемент №3</a>
+							<pre>
+								<code>
+									function documentAction(e) {
+										const elementTarget = e.target
+										if (elementTarget.closest('.item')) {
+											const currentElement = elementTarget.closest('.item')
+											currentElement.classList.toggle('active')
+										}
+									}
+									document.addEventListener("click", documentAction)
+								</code>
+							</pre>
+						</div>
+					</section>
+					<section class="problem">
+						<h2 class="problem__title">
+							Задача №2
+						</h2>
+						<p class="problem__subtitle">
+							Дано в css/scss: body прозорий
+						</p>
+						<p class="problem__subtitle">
+							При повному завантаженню сторінки додати клас до body який прибирає
+							прозорість.
+						</p>
+
+						<div class="problem__answer">
+							Відповідь:
+							<pre>
+							<code>
+								const bodyElement = document.querySelector('.body')
+								window.addEventListener("load", pageLoaded)
+								function pageLoaded(event) {
+									bodyElement.classList.add('loaded')
+								}
+							</code>
+						</pre>
+						</div>
+					</section>
+					<section class="problem">
+						<h2 class="problem__title">
+							Задача №3
+						</h2>
+						<p class="problem__subtitle">
+							Дано в html: header main footer
+						</p>
+						<p class="problem__subtitle">
+							При наведенні курсору на header змінювати колір фону у footer.
+						</p>
+						<p class="problem__subtitle">
+							Коли курсор йде з header повертати початковий фон для footer.
+						</p>
+						<div class="problem__answer">
+							Відповідь:
+							<pre>
+								<code>
+									const header = document.querySelector('.header')
+									const footer = document.querySelector('.footer')
+									header.addEventListener("mouseenter", changeColor)
+									header.addEventListener("mouseleave", changeColorBack)
+									function changeColor(event) {
+										footer.classList.add('background')
+									}
+									function changeColorBack(event) {
+										footer.classList.remove('background')
+									}
+								</code>
+							</pre>
+						</div>
+					</section>
+					<section class="problem">
+						<h2 class="problem__title">
+							Задача №4
+						</h2>
+						<p class="problem__subtitle">
+							Дано в html: текст, елемент з класом item, текст. Так, що елемент з
+							класом item за межами в'юпорта.
+						</p>
+						<p class="problem__subtitle">
+							Створити функцію яка будує інтервал який буде змінювати контент в
+							елементі item виводячи цифру яка збільшується на одиницю: 1 2 3 ... і
+							т.д.
+						</p>
+						<p class="problem__subtitle">
+							Затримка між зміною числа, та до якого числа має працювати інтервал має
+							задаватись в дата атрибутах елемента item.
+						</p>
+						<p class="problem__subtitle">
+							Функція має запускатись коли ми доскролюємо до елементу item (його
+							видно), і не запускатись повторно.
+						</p>
+						<div class="problem__answer">
+							<p>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi eos
+								obcaecati similique quidem harum consequuntur dolorum ea voluptas,
+								architecto veniam perspiciatis optio quisquam ad modi eum quam soluta
+								earum repellat quia suscipit excepturi! Quia ex necessitatibus
+								excepturi. Quod tempore est, similique incidunt, eius saepe ad, officiis
+								voluptate voluptatem dolorem accusamus? Aut veniam odio veritatis nulla,
+								corrupti aliquid minima perspiciatis magnam officiis officia maiores,
+								numquam nam molestiae est, placeat nisi blanditiis similique ipsam
+								sapiente! Quis ad minus ipsa voluptatibus autem ex error sunt mollitia!
+								Eligendi explicabo reiciendis animi. Nesciunt accusantium, aut ducimus
+								quos voluptatem consequatur deserunt ullam amet cumque totam neque
+								asperiores. Excepturi rem cumque placeat odio magni impedit molestias
+								laborum, tempora vel, voluptatum beatae omnis. Culpa dolor iste aut
+								assumenda ad dicta veniam blanditiis voluptate repudiandae voluptatibus
+								ipsam eum autem quo saepe, debitis impedit magnam eius sapiente, minima
+								itaque, laboriosam maiores. Illo iste itaque odio impedit tempora sint
+								consequuntur? Sint ea id temporibus corrupti quo impedit iste esse
+								cupiditate, dolorum, doloribus mollitia amet saepe ipsam? Dignissimos
+								fugiat sequi quia totam perspiciatis cumque? Earum, velit, recusandae
+								tempore tempora officiis debitis vel eaque fuga iusto fugiat minus ipsam
+								accusamus sapiente? Amet, minima sequi dolore eos eligendi iste
+								repellendus recusandae libero atque odit sapiente accusamus optio
+								aspernatur, fugiat unde. Possimus fugiat doloribus vitae illo quibusdam
+								eos. Quos recusandae modi repellat sunt atque? Ad ullam aspernatur cum
+								aperiam culpa expedita earum, recusandae optio maxime voluptatem, rem
+								atque odio temporibus nesciunt unde molestias! Repellendus, dolore!
+								Error voluptatem non vitae, illum iusto dicta dignissimos aliquid,
+								voluptas quaerat quasi soluta temporibus totam commodi nesciunt,
+								consectetur ut facere ullam. Reiciendis laudantium dolorum ratione in?
+								Nihil consequatur animi voluptatum, maiores possimus consectetur nisi
+								veniam dolor inventore facilis ullam deserunt officia delectus, quos
+								dolorem ab amet vitae praesentium itaque exercitationem tempore natus?
+								Sunt incidunt distinctio eius molestias beatae reiciendis ab, sapiente
+								asperiores. Accusantium aliquam cumque nihil deserunt nesciunt libero
+								perferendis quas sit magnam. Fugit aut amet sed fugiat vel quasi magnam,
+								qui alias corrupti dolorem, corporis, quas cum maiores rem voluptates.
+								Itaque quod facilis amet reiciendis laudantium debitis consectetur?
+								Eligendi corporis ipsum cupiditate dolorem? Temporibus adipisci facilis,
+								quibusdam tempora aliquam reiciendis natus ipsam nulla beatae, nemo
+								cupiditate ratione tenetur saepe autem a, ut maiores suscipit doloribus
+								excepturi dignissimos repellendus molestiae nisi. Illo inventore velit
+								harum delectus eius eligendi beatae eveniet aliquam perspiciatis
+								voluptatem pariatur fuga fugit, molestias adipisci ducimus nihil laborum
+								corrupti rem mollitia veniam hic? Accusantium sit itaque quas quibusdam
+								dolorem voluptate repellendus sapiente culpa optio voluptates.
+								Distinctio minima explicabo mollitia voluptatibus deleniti fugit
+								repudiandae, similique dolores quam? Ut fugiat dolore soluta, voluptas
+								accusamus, delectus deleniti dolor quia aliquid vero vel magnam mollitia
+								voluptatibus aut quidem corrupti error! Delectus recusandae animi
+								placeat quae voluptatum impedit dolore quo. Magni molestias esse cumque,
+								corrupti quia qui maxime dolorum voluptate facere illum sequi voluptas
+								tempore neque autem assumenda totam ab modi voluptatibus officia enim
+								perspiciatis. Perferendis praesentium rerum voluptate, fugit aliquam
+								aperiam assumenda veniam quis dicta eos debitis laudantium hic tenetur
+								vero porro illum quisquam? Est, veniam quaerat eveniet nisi sed ea.
+							</p>
+							<div data-speed="500" data-limit="10" class="count">count</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quidem
+								aut, et ex earum magni voluptatibus quisquam fuga excepturi obcaecati
+								architecto. Aut culpa cum dolore dolorem, saepe impedit esse maxime
+								accusantium tempora sit? Illo amet, quis quasi architecto corrupti totam
+								eum doloribus perferendis libero quia nesciunt vitae, voluptatum minus
+								illum minima sint sed quos tempore placeat id! Nihil doloremque officia
+								veritatis iure dolor quis at ducimus quasi minima soluta. Odit, totam
+								quod laudantium repellat fuga alias est! Delectus, omnis quo. Quam sint
+								obcaecati esse saepe adipisci accusantium delectus, commodi, quas
+								asperiores sit, minima accusamus. Ducimus, nihil qui expedita beatae
+								molestiae recusandae veniam ut odio suscipit quo magnam quas ipsum?
+								Vitae nisi repudiandae nemo quae pariatur explicabo asperiores veniam
+								minus consequuntur soluta illo excepturi quidem, id eum, totam
+								laboriosam nulla tempore accusamus. Exercitationem ipsa itaque, impedit
+								culpa unde, hic dolor corporis natus iure officia amet quos voluptates
+								sapiente reprehenderit inventore? Distinctio alias officiis, amet esse
+								molestiae porro, facere enim quidem minima sit perspiciatis commodi
+								quisquam mollitia architecto laborum recusandae voluptatum impedit
+								officia voluptates tenetur. Quia in rerum iusto quibusdam itaque quae
+								quasi nulla necessitatibus. Quas esse incidunt explicabo perferendis
+								nam. Debitis nulla dolore corrupti sed, fuga temporibus mollitia labore
+								quod quas natus voluptate distinctio iure! Quisquam et ipsum earum
+								repellat voluptatum, qui tempora nostrum nulla maiores aperiam impedit
+								doloribus sapiente dicta minus! Commodi maiores sunt nesciunt aut porro
+								dolore mollitia rem laudantium sed asperiores alias debitis, possimus
+								explicabo, reprehenderit et corrupti aliquid culpa ex delectus! Id eos
+								laboriosam natus est ea aliquid maiores dignissimos dicta alias tenetur,
+								omnis commodi, nisi doloribus odit accusantium velit nam animi dolorum
+								molestias quo mollitia voluptatem quis fugit quas? Dolor ad tempora
+								incidunt minima, autem eveniet provident mollitia ratione eius deleniti
+								nostrum odit necessitatibus unde sit consequatur vero totam. Culpa
+								suscipit perferendis reiciendis voluptas quidem harum quasi esse aliquid
+								porro nobis, unde perspiciatis laborum assumenda velit praesentium
+								repellat consectetur quam excepturi itaque? Veritatis consequatur, magni
+								unde omnis consectetur pariatur cumque, qui saepe assumenda quas, amet
+								tenetur eligendi error libero odio. At, maxime explicabo aliquid amet
+								ipsum necessitatibus, dicta fugiat tempora est veritatis beatae
+								distinctio atque dolore facere obcaecati mollitia maiores natus autem,
+								consequatur neque veniam libero excepturi fugit non. Aliquid consequatur
+								optio necessitatibus cum. Illo quo quibusdam deleniti, saepe hic
+								dignissimos magnam voluptates quod fugit, provident iure atque,
+								architecto soluta pariatur nulla repudiandae similique nobis quasi?
+								Commodi facere ullam maxime architecto praesentium voluptas atque sed
+								sit, minima sequi iste doloribus beatae fuga itaque incidunt eius
+								inventore mollitia quae dicta eos ab iure similique dolores. Similique
+								velit quam repellat exercitationem repellendus aliquam accusantium,
+								ratione nobis quod in est vel odit dolorum nisi magni, perferendis ut
+								provident deserunt ab quisquam quis alias minus animi placeat. Qui
+								corrupti quod mollitia eveniet ad vero autem ut eligendi fuga sint
+								maxime necessitatibus enim optio accusantium magnam soluta, a ipsam
+								molestiae inventore quia voluptatem? Deserunt esse amet quasi, autem
+								sequi delectus incidunt modi nisi voluptas vero dolorum nobis ut hic?
+								Velit tempore molestias modi deleniti facilis tenetur nemo, voluptate
+								adipisci sint numquam.
+							</p>
+							Відповідь:
+							<pre>
+								<code>
+									let i = 1
+									const count = document.querySelector(".count")
+									const speed = parseFloat(count.dataset.speed) || 200
+									const limit = parseFloat(count.dataset.limit) || 20
+									const options = {
+										root: null,
+										rootMargin: "0px 0px 0px 0px",
+										threshold: 1,
+									}
+									const callback = (entries, observer) => {
+										entries.forEach(entry => {
+											const currentElement = entry.target
+											if (entry.isIntersecting) {
+												let timer = setInterval(() => {
+													count.innerHTML = i
+													i === limit ? clearInterval(timer) : null
+													++i
+												}, speed)
+												}
+										})
+									}
+									const observer = new IntersectionObserver(callback, options)
+									const target = document.querySelector('.count')
+									observer.observe(target)
+								</code>
+							</pre>
+						</div>
+					</section>
+					<p class="page__text">
+						опрацювання теорії та вирішення задач у файлі <mark>js/srript.js</mark>
+					</p>
+				</div>
+			</main>
+			<footer class="footer">
+				<div class="footer__container">
+					<div class="footer__logo">JavaScript 2024</div>
+				</div>
+			</footer>
+		</div>
+		<script src="js/srript.js"></script>
+	</body>
+
+</html>
