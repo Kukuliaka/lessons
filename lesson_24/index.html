@@ -254,32 +254,34 @@
 							<pre>
 								<code>
 									const count = document.querySelector(".count")
-									const speed = parseFloat(count.dataset.speed) || 200
-									const limit = parseFloat(count.dataset.limit) || 20
-									const options = {
-										root: null,
-										rootMargin: "0px 0px 0px 0px",
-										threshold: 1,
-									}
-									let i = 1
-									const callback = (entries, observer) => {
-										entries.forEach(entry => {
-											const currentElement = entry.target
-											if (entry.isIntersecting ) {
-												let timer = setInterval(() => {
-													count.innerHTML = i
-													if (i === limit) {
-														clearInterval(timer)
-													} else {
-														++i
+									if (count) {
+										const speed = parseFloat(count.dataset.speed) || 200
+										const limit = parseFloat(count.dataset.limit) || 20
+										const options = {
+											root: null,
+											rootMargin: "0px 0px 0px 0px",
+											threshold: 1,
+										}
+										let i = 1
+										const callback = (entries, observer) => {
+											entries.forEach(entry => {
+												const currentElement = entry.target
+												if (entry.isIntersecting) {
+													let timer = setInterval(() => {
+														count.innerHTML = i
+														if (i === limit) {
+															clearInterval(timer)
+														} else {
+															++i
+														}
+													}, speed)
 													}
-												}, speed)
-												}
-										})
-									}
-									const observer = new IntersectionObserver(callback, options)
-									const target = document.querySelector('.count')
-									observer.observe(target)
+											})
+										}
+										const observer = new IntersectionObserver(callback, options)
+										const target = document.querySelector('.count')
+										observer.observe(target)
+									} 
 								</code>
 							</pre>
 						</div>
