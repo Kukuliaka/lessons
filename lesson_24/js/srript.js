@@ -9,8 +9,8 @@
 function documentAction(event) {
 	const elementTarget = event.target
 	if (elementTarget.closest('.item')) {
-		const currentElement = elementTarget.closest('.item')
-		currentElement.classList.toggle('active')
+		const currentItem = elementTarget.closest('.item')
+		currentItem.classList.toggle('active')
 	}
 }
 document.addEventListener("click", documentAction)
@@ -20,7 +20,7 @@ document.addEventListener("click", documentAction)
 // Дано в css/scss: body прозорий
 // При повному завантаженню сторінки додати клас до body який прибирає прозорість.
 
-const bodyElement = document.querySelector('body')
+const bodyElement = document.body
 window.addEventListener("load", pageLoaded)
 function pageLoaded(event) {
 	bodyElement.classList.add('loaded')
@@ -33,13 +33,15 @@ function pageLoaded(event) {
 
 const header = document.querySelector('.header')
 const footer = document.querySelector('.footer')
-header.addEventListener("mouseenter", changeColor)
-header.addEventListener("mouseleave", changeColorBack)
-function changeColor(event) {
-	footer.classList.add('background')
-}
-function changeColorBack(event) {
-	footer.classList.remove('background')
+if (header && footer) {
+	header.addEventListener("mouseenter", changeColor)
+	header.addEventListener("mouseleave", changeColorBack)
+	function changeColor(event) {
+		footer.classList.add('background')
+	}
+	function changeColorBack(event) {
+		footer.classList.remove('background')
+	}
 }
 
 // Задача №4
@@ -48,7 +50,6 @@ function changeColorBack(event) {
 // Затримка між зміною числа, та до якого числа має працювати інтервал має задаватись в дата атрибутах елемента item.
 // Функція має запускатись коли ми доскролюємо до елементу item (його видно), і не запускатись повторно.
 
-let i = 1
 const count = document.querySelector(".count")
 const speed = parseFloat(count.dataset.speed) || 200
 const limit = parseFloat(count.dataset.limit) || 20
@@ -58,16 +59,18 @@ const options = {
 	rootMargin: "0px 0px 0px 0px",
 	threshold: 1,
 }
-
+let i = 1
 const callback = (entries, observer) => {
 	entries.forEach(entry => {
 		const currentElement = entry.target
-		if (entry.isIntersecting) {
+		if (entry.isIntersecting ) {
 			let timer = setInterval(() => {
 				count.innerHTML = i
-				// console.log(i)
-				i === limit ? clearInterval(timer) : null
-				++i
+				if (i === limit) {
+					clearInterval(timer)
+				} else {
+					++i
+				}
 			}, speed)
 			}
 	})
