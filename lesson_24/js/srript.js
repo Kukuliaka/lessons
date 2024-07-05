@@ -51,34 +51,33 @@ if (header && footer) {
 // Функція має запускатись коли ми доскролюємо до елементу item (його видно), і не запускатись повторно.
 
 const count = document.querySelector(".count")
-
 if (count) {
-	const speed = parseFloat(count.dataset.speed) || 200
-	const limit = parseFloat(count.dataset.limit) || 20
 	const options = {
 		root: null,
 		rootMargin: "0px 0px 0px 0px",
 		threshold: 1,
 	}
-	let i = 1
-	const callback = (entries, observer) => {
+	
+	const callback = (entries, observer) => { // робиться реакція на подію
 		entries.forEach(entry => {
-			const currentElement = entry.target
-			if (entry.isIntersecting) {
-				let timer = setInterval(() => {
-					count.innerHTML = i
-					if (i === limit) {
-						clearInterval(timer)
-					} else {
-						++i
-					}
-				}, speed)
+			let i = 0
+			const speed = parseFloat(count.dataset.speed) || 200
+			const limit = parseInt(count.dataset.limit) || 0
+				if (entry.isIntersecting) { 
+					let timer = setInterval(() => {
+						count.innerHTML = i
+						if (i >= limit) {
+							clearInterval(timer)
+						} else {
+							++i
+						}
+					}, speed)
+					observer.unobserve(count) // зупиняє повторний запуск
 				}
 		})
 	}
-	const observer = new IntersectionObserver(callback, options)
-	const target = document.querySelector('.count')
-	observer.observe(target)
+	const observer = new IntersectionObserver(callback, options) // запуск observer
+	observer.observe(count)
 } 
 
 
