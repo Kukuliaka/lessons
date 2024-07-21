@@ -232,6 +232,13 @@ body {
 		@media (any-hover:hover) {
 			&:hover .popular__info{
 				opacity: 1;
+				visibility: visible;
+			}
+		}
+		@media (any-hover: none) {
+			.popular__info {
+				opacity: 1;
+				visibility: visible;
 			}
 		}
 	}
@@ -283,6 +290,7 @@ body {
 		justify-content: space-between;
 		align-items: center;
 		opacity: 0;
+		visibility: visible;
 		transition: opacity 0.3s;
 		& > span {
 			white-space: nowrap;
@@ -392,6 +400,13 @@ h2.title {
 		@media (any-hover:hover) {
 			&:hover .card__info {
 				opacity: 1;
+				visibility: visible;
+			}
+		}
+		@media (any-hover: none) {
+			.card__info {
+				opacity: 1;
+				visibility: visible;
 			}
 		}
 	}
@@ -446,6 +461,7 @@ h2.title {
 		justify-content: space-between;
 		align-items: center;
 		opacity: 0;
+		visibility: hidden;
 		transition: opacity 0.3s;
 		& a {
 			transition: color 0.3s;
