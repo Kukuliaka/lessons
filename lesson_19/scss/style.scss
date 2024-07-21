@@ -340,7 +340,7 @@ body {
 		display: grid;
 		gap: toRem(24);
 		grid-template-columns: repeat(auto-fill, minmax(toRem(250), 1fr));
-		grid-template-rows: repeat(auto, 1fr);
+		grid-template-rows: repeat(2, 1fr);
 	}
 
 	// .newsletter__item
