@@ -463,6 +463,7 @@ h2.title {
 		opacity: 0;
 		visibility: hidden;
 		transition: opacity 0.3s;
+		
 		& a {
 			transition: color 0.3s;
 		}
@@ -759,6 +760,12 @@ h2.title {
 			}
 			&:hover .instagram__icon {
 				opacity: 1;
+			}
+		}
+		@media (any-hover: none) {
+			.instagram__icon,
+			&::before {
+				opacity: 0.3;
 			}
 		}
 	}
