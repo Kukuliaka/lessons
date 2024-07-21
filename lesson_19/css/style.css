@@ -1162,7 +1162,7 @@ body {
     padding-block: 0.9375rem;
   }
 }
-.brands__container {
+.brands__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1177,13 +1177,13 @@ body {
           column-gap: 0.625rem;
 }
 @media (max-width: 47.99875em) {
-  .brands__container {
+  .brands__list {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
 }
-.brands__container img {
+.brands__item img {
   -o-object-fit: contain;
      object-fit: contain;
   aspect-ratio: 200/70;
@@ -1238,6 +1238,13 @@ body {
 @media (any-hover: hover) {
   .popular__item:hover .popular__info {
     opacity: 1;
+    visibility: visible;
+  }
+}
+@media (any-hover: none) {
+  .popular__item .popular__info {
+    opacity: 1;
+    visibility: visible;
   }
 }
 .popular__image {
@@ -1291,6 +1298,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   opacity: 0;
+  visibility: visible;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
@@ -1430,6 +1438,13 @@ h2.title {
 @media (any-hover: hover) {
   .card__wrapper:hover .card__info {
     opacity: 1;
+    visibility: visible;
+  }
+}
+@media (any-hover: none) {
+  .card__wrapper .card__info {
+    opacity: 1;
+    visibility: visible;
   }
 }
 .card__image {
@@ -1488,6 +1503,7 @@ h2.title {
       -ms-flex-align: center;
           align-items: center;
   opacity: 0;
+  visibility: hidden;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
@@ -1922,6 +1938,11 @@ h2.title {
   }
   .instagram__link:hover .instagram__icon {
     opacity: 1;
+  }
+}
+@media (any-hover: none) {
+  .instagram__link .instagram__icon, .instagram__link::before {
+    opacity: 0.3;
   }
 }
 .instagram__icon {

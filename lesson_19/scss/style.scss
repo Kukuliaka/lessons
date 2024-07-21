@@ -167,6 +167,11 @@ body {
 
 	// .brands__container
 	&__container {
+		
+		
+	}
+	// .brands__list
+	&__list {
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
@@ -175,6 +180,10 @@ body {
 		@media (max-width: toEm(767.98)) {
 			justify-content: center;
 		}
+	}
+
+	// .brands__item
+	&__item {
 		& img {
 			object-fit: contain;
 			aspect-ratio: 200 / 70;
