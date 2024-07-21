@@ -715,7 +715,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media (max-width: 47.99875em) {
   .top-footer__logo {
-    font-size: 1.25rem;
+    font-size: 1.375rem;
   }
 }
 .top-footer__logo::before, .top-footer__logo::after {
