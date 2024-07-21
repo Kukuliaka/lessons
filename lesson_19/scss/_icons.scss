@@ -1,0 +1,60 @@
+
+[class*="_icon-"]::before {
+	font-family: 'icons' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class*="_icon-"]::after {
+	font-family: 'icons' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+._icon-account:before {
+	content: "\e900";
+ }
+ ._icon-arrow-left:before {
+	content: "\e901";
+ }
+ ._icon-arrow-up::after {
+	content: "\e902";
+ }
+ ._icon-filter:before {
+	content: "\e903";
+ }
+ ._icon-search:before {
+	content: "\e904";
+ }
+ ._icon-s-facebook:before {
+	content: "\e905";
+ }
+ ._icon-shoping:before {
+	content: "\e906";
+ }
+ ._icon-s-instagram:before {
+	content: "\e907";
+ }
+ ._icon-s-linkedin:before {
+	content: "\e908";
+ }
+ ._icon-s-twitter:before {
+	content: "\e909";
+ }
+ 
