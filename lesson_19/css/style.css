@@ -1357,7 +1357,7 @@ body {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr));
-  grid-template-rows: repeat(auto, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 h2.title {
   font-weight: 500;
