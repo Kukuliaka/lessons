@@ -179,7 +179,7 @@ body {
 		flex-wrap: wrap;
 		row-gap: toRem(20);
 		column-gap: toRem(10);
-		@media (max-width: toEm(767.98)) {
+		@media (max-width: toEm(1100)) {
 			justify-content: center;
 		}
 	}
