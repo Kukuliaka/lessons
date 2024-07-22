@@ -111,30 +111,14 @@
 
 	// .top-header__logo
 	&__logo {
-		font-family: 'AmstelvarAlpha', sans-serif;
-		font-size: toRem(28);
-		line-height: 1.2;
 		position: relative;
 		z-index: 50;
-		text-transform: uppercase;
-		display: flex;
-		column-gap: toRem(10);
-		display: flex;
-		align-items: center;
-		@media (max-width: toEm(479.98)) {
-			font-size: toRem(22);
-		}
-		&::before,
-		&::after {
-			content: "";
-			background: url("../img/icons/decor.svg") no-repeat;
-			background-size: contain;
-			inline-size: 31px;
-			block-size: 15px;
-			@media (max-width: toEm(479.98)) {
-				inline-size: 24px;
-				block-size: 12px;
-			}
+		max-width: toRem(180);
+		& img {
+			aspect-ratio: 180 / 34;
+			block-size: 100%;
+			inline-size: 100%;
+			object-fit: contain;
 		}
 	}
 
@@ -232,6 +216,10 @@
 	@media (min-width: 768px) {
 		display: none;
 	}
+}
+
+.menu-open body{
+	overflow: hidden;
 }
 
 .bottom-header {

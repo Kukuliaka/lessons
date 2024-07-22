@@ -19,6 +19,9 @@
 
 
 // Основные стили 
+html{
+	scroll-behavior: smooth;
+}
 
 body {
 	font-family: Roboto, sans-serif;
@@ -148,7 +151,7 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border-radius: 35% 0 35% 0;
+		border-radius: 37.7% 0 37.7% 0; // 160 / 424 * 100
 		border: toRem(2) solid rgba(0, 0, 0, 0.25);
 
 		& img {
@@ -156,7 +159,7 @@ body {
 			block-size: 100%;
 			aspect-ratio: 424 / 542;
 			object-fit: cover;
-			border-radius: 35% 0 35% 0;
+			border-radius: 37.7% 0 37.7% 0;
 			margin: toRem(-10) 0 toRem(10) toRem(-18);
 		}
 	}
@@ -294,7 +297,7 @@ body {
 	display: inline-block;
 	position: absolute;
 	inset-inline-start: 0;
-	
+	cursor: pointer;
 
 	// .label__action
 	&__action {
@@ -318,7 +321,6 @@ body {
 }
 .newsletter {
 	font-family: "Open Sans", sans-serif;
-
 	// .newsletter__title
 	&__title {
 		margin-block-end: toRem(35);
@@ -346,6 +348,7 @@ body {
 	// .newsletter__filter
 	&__filter {
 		font-family: "Open Sans", sans-serif;
+		text-transform: capitalize;
 		line-height: 1.5;
 		color: #fff;
 		background-color: #000;
@@ -386,8 +389,9 @@ h2.title {
 	column-gap: toRem(40);
 	flex-wrap: wrap;
 
-	// .menu__item
-	&__item {
+	// .menu__button
+	&__button {
+		text-transform: capitalize;
 		color: rgb(127, 127, 127);
 		font-weight: 600;
 		line-height: 1.5; /* 24/16 */
@@ -402,9 +406,6 @@ h2.title {
 			}
 		}
 	}
-
-	// .menu__link
-	&__link {}
 }
 
 .card {
@@ -434,6 +435,10 @@ h2.title {
 		position: relative;
 		flex-shrink: 0;
 		flex-basis: toRem(400);
+		& a {
+			inline-size: 100%;
+			block-size: 100%;
+		}
 		& img {
 			aspect-ratio: 312 / 400;
 			object-fit: cover;
@@ -465,13 +470,14 @@ h2.title {
 		align-items: center;
 		opacity: 0;
 		visibility: hidden;
-		transition: opacity 0.3s;
-		
-		& a {
+		transition: 0.5s;
+		text-transform: capitalize;
+		& button {
 			transition: color 0.3s;
+			text-transform: capitalize;
 		}
 		@media (any-hover:hover) {
-			& a:hover {
+			& button:hover {
 				color:rgb(255, 111, 97);
 			}
 		}
@@ -684,9 +690,10 @@ h2.title {
 	// .best-sellers__menu
 	&__menu {}
 
-	// .best-sellers__link
-	&__link {
+	// .best-sellers__button
+	&__button {
 		font-family: "Open Sans", sans-serif;
+		text-transform: capitalize;
 		line-height: 1.5;
 		color: #fff;
 		background-color: #000;
@@ -714,7 +721,7 @@ h2.title {
 		flex-shrink: 0;
 		flex-basis: toRem(312);
 		inline-size: toRem(312);
-		@media (max-width: toEm(350)) {
+		@media (max-width: toEm(340)) {
 			max-width: toRem(290);
 		}
 	}

@@ -34,24 +34,12 @@
 
 	// .top-footer__logo
 	&__logo {
-		font-family: AmstelvarAlpha;
-		font-size: toRem(28);
-		line-height: 1.1;	
-		text-transform: uppercase;
-		@media (max-width: toEm(767.98)) {
-			font-size: toRem(22);
-		}
-		&::before,
-		&::after {
-			content: "";
-			background: url("../img/icons/decor.svg") no-repeat;
-			background-size: contain;
-			width: 31px;
-			height: 15px;
-			@media (max-width: toEm(767.98)) {
-				inline-size: 24px;
-				block-size: 12px;
-			}
+		max-width: toRem(180);
+		& img {
+			aspect-ratio: 180 / 34;
+			block-size: 100%;
+			inline-size: 100%;
+			object-fit: contain;
 		}
 	}
 
