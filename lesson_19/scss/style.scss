@@ -262,24 +262,7 @@ body {
 
 	// .popular__label
 	&__label {
-		display: inline-block;
-		position: absolute;
-		inset-inline-start: 0;
-		inset-block-start: toRem(22);
-		font-family: "Open Sans", sans-serif;
-		font-size: toRem(12);
-		font-weight: 600;
-		line-height: 1.33; /* 16/12 */
-		text-transform: uppercase;
-		background-color: #000;
-		padding: toRem(4) toRem(12);
-		min-width: toRem(52);
-		block-size: toRem(24);
-		color: #fff;
-		&--red {
-			inset-block-start: toRem(60);
-			background-color: rgb(255, 111, 97);
-		}
+		
 	}
 	
 	// .popular__info
@@ -306,7 +289,33 @@ body {
 		}
 	}
 }
+.label {
+	inset-block-start: toRem(22);
+	display: inline-block;
+	position: absolute;
+	inset-inline-start: 0;
+	
 
+	// .label__action
+	&__action {
+		font-family: "Open Sans", sans-serif;
+		font-size: toRem(12);
+		font-weight: 600;
+		line-height: 1.33; /* 16/12 */
+		text-transform: uppercase;
+		background-color: #000;
+		padding: toRem(4) toRem(12);
+		min-width: toRem(52);
+		block-size: toRem(24);
+		color: #fff;
+		&:not(:last-child) {
+			margin-block-end: toRem(15);
+		}
+		&--red {
+			background-color: rgb(255, 111, 97);
+		}
+	}
+}
 .newsletter {
 	font-family: "Open Sans", sans-serif;
 
@@ -435,22 +444,7 @@ h2.title {
 
 	// .card__label
 	&__label {
-		display: inline-block;
-		position: absolute;
-		inset-inline-start: 0;
-		inset-block-start: toRem(22);
-		font-size: toRem(12);
-		font-weight: 600;
-		line-height: 1.33; /* 16/12 */
-		text-transform: uppercase;
-		background-color: #000;
-		padding: toRem(4) toRem(12);
-		min-width: toRem(52);
-		block-size: toRem(24);
-		color: #fff;
-		&--red {
-			background-color: rgb(255, 111, 97);
-		}
+		
 	}
 	
 	// .card__info
@@ -504,6 +498,12 @@ h2.title {
 		font-weight: 600;
 		line-height: 1.37; /* 22/16 */
 		flex-grow: 1;
+		@media (any-hover:hover) {
+			& a:hover {
+				text-decoration: underline;
+			}
+		}
+		
 	}
 
 	// .card__footer
@@ -511,6 +511,11 @@ h2.title {
 		display: flex;
 		justify-content: space-between;
 		gap: toRem(10);
+		@media (any-hover:hover) {
+			& a:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 
 	// .card__name
@@ -705,9 +710,13 @@ h2.title {
 
 	// .best-sellers__item
 	&__item {
+		
 		flex-shrink: 0;
 		flex-basis: toRem(312);
 		inline-size: toRem(312);
+		@media (max-width: toEm(350)) {
+			max-width: toRem(290);
+		}
 	}
 }
 
@@ -735,7 +744,7 @@ h2.title {
 	// .instagram__photos
 	&__photos {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(toRem(180), 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(toRem(120), 1fr));
 		gap: toRem(24);
 		margin-block-end: toRem(70);
 		@media (max-width: toEm(767.98)) {
@@ -743,9 +752,17 @@ h2.title {
 		}
 	}
 
+	// .instagram__item
+	&__item {
+		
+		
+	}
+
 	// .instagram__link
 	&__link {
 		position: relative;
+		inline-size: 100%;
+		block-size: 100%;
 		&::before {
 			content: "";
 			position: absolute;
@@ -784,8 +801,8 @@ h2.title {
 		position: absolute;
 		inline-size: toRem(48);
 		block-size: toRem(48);
-		inset-block-start: 40%;
-		inset-inline-start: 40%;
+		inset-block-start: 35%;
+		inset-inline-start: 35%;
 		opacity: 0;
 		transition: opacity 0.3s;
 	}
