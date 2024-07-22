@@ -1146,7 +1146,7 @@ body {
      -moz-column-gap: 0.625rem;
           column-gap: 0.625rem;
 }
-@media (max-width: 47.99875em) {
+@media (max-width: 68.75em) {
   .brands__list {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
