@@ -235,6 +235,9 @@
 		column-gap: toRem(30);
 		row-gap: toRem(10);
 		flex-wrap: wrap;
+		@media (max-width: toEm(1100)) {
+			justify-content: center;
+		}
 	}
 	
 	// .bottom-header__item

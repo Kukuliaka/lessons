@@ -170,9 +170,8 @@ body {
 
 	// .brands__container
 	&__container {
-		
-		
 	}
+
 	// .brands__list
 	&__list {
 		display: flex;
@@ -265,7 +264,6 @@ body {
 
 	// .popular__label
 	&__label {
-		
 	}
 	
 	// .popular__info
@@ -321,6 +319,7 @@ body {
 }
 .newsletter {
 	font-family: "Open Sans", sans-serif;
+	
 	// .newsletter__title
 	&__title {
 		margin-block-end: toRem(35);

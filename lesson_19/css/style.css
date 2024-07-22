@@ -529,6 +529,13 @@ input[type=search]::-webkit-search-results-decoration {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+@media (max-width: 68.75em) {
+  .bottom-header__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 .bottom-header__link {
   position: relative;
   z-index: 20;
