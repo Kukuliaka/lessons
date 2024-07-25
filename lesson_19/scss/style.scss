@@ -72,12 +72,12 @@ body {
 	&__instagram {}
 }
 .collections {
-	background: url('../img/main/decor_left.svg') 0 78% no-repeat,
-	url('../img/main/decor_right.svg') right 55% no-repeat,
+	background: url('../img/main/collections/decor_left.svg') 0 78% no-repeat,
+	url('../img/main/collections/decor_right.svg') right 55% no-repeat,
 	rgba(30, 40, 50, 0.05);
 	@media (max-width: toEm(479.98)) {
-		background: url('../img/main/decor_left.svg') 0 20% no-repeat,
-		url('../img/main/decor_right.svg') right 5% no-repeat,
+		background: url('../img/main/collections/decor_left.svg') 0 20% no-repeat,
+		url('../img/main/collections/decor_right.svg') right 5% no-repeat,
 		rgba(30, 40, 50, 0.05);
 	}
 	
@@ -114,7 +114,7 @@ body {
 
 	// .collections__text
 	&__text {
-		@include adaptiveValue("font-size", 30, 18, 0, 1350, 479);
+		font-size: clamp(1.125rem, 0.713rem + 1.38vw, 1.875rem); // from 30px to 18px
 		line-height: 1.83; /* 55/30 */
 		margin-block-end: toRem(66);
 		@media (max-width: toEm(767.98)) {
@@ -128,7 +128,7 @@ body {
 
 	// .collections__link
 	&__link {
-		@include adaptiveValue("font-size", 29, 16, 0, 1350, 479);
+		font-size: clamp(1rem, 0.553rem + 1.49vw, 1.813rem); // from 29px to 16px
 		color: #fff;
 		padding: toRem(19) toRem(26);
 		background-color: #000;
@@ -147,26 +147,35 @@ body {
 	// .collections__image
 	&__image {
 		max-width: toRem(424);
+		aspect-ratio: 424 / 542;
 		flex: 1 1 50%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border-radius: 37.7% 0 37.7% 0; // 160 / 424 * 100
+		// border-radius: 37.7% 0 37.7% 0; // 160 / 424 * 100
+		// подвійний (асиметричний) запис
+		border-radius: 37.73% 0 37.73% 0 / 29.46% 0 29.46% 0;
 		border: toRem(2) solid rgba(0, 0, 0, 0.25);
+		@media (max-width: toEm(479.98)) {
+			margin-inline-start: toRem(15);
+			margin-block-start: toRem(10);
+		}
 
 		& img {
 			inline-size: 100%;
 			block-size: 100%;
-			aspect-ratio: 424 / 542;
 			object-fit: cover;
-			border-radius: 37.7% 0 37.7% 0;
-			margin: toRem(-10) 0 toRem(10) toRem(-18);
+			// border-radius: 37.7% 0 37.7% 0; // 160 / 424 * 100
+			// подвійний (асиметричний) запис
+			border-radius: 37.73% 0 37.73% 0 / 29.46% 0 29.46% 0;
+			transform: translate(-4.25%, -3.68%);
+			//margin: toRem(-10) 0 toRem(10) toRem(-18);
 		}
 	}
 }
 
 .brands {
-	@include adaptiveValue ("padding-block", 90, 15, 0, 1350, 320);
+	@include adaptiveValue ("padding-block", 90, 20, 0, 1350, 320);
 
 	// .brands__container
 	&__container {
@@ -319,7 +328,7 @@ body {
 }
 .newsletter {
 	font-family: "Open Sans", sans-serif;
-	
+
 	// .newsletter__title
 	&__title {
 		margin-block-end: toRem(35);
@@ -368,7 +377,6 @@ body {
 		display: grid;
 		gap: toRem(24);
 		grid-template-columns: repeat(auto-fill, minmax(toRem(250), 1fr));
-		grid-template-rows: repeat(2, 1fr);
 	}
 
 	// .newsletter__item
@@ -550,6 +558,7 @@ h2.title {
 	background: url("../img/main/zara/zara_bg.png") right toRem(50) no-repeat,
 	#000;
 	color: #fff;
+	
 
 	// .zara__container
 	&__container {
@@ -564,6 +573,7 @@ h2.title {
 	// .zara__image
 	&__image {
 		margin-inline-start: toRem(-80);
+		aspect-ratio: 585 / 579;
 		@include adaptiveValue("padding-block-start", 80, 40, 0, 1350, 767);
 		block-size: 100%;
 		@media (max-width: toEm(1430)) {
@@ -574,6 +584,7 @@ h2.title {
 		}
 		& img {
 			inline-size: 100%;
+			block-size: 100%;
 			object-fit: cover;
 		}
 	}
@@ -584,6 +595,7 @@ h2.title {
 		display: flex;
 		flex-direction: column;
 		gap: toRem(55);
+		padding-block-end: toRem(20);
 		@include adaptiveValue("padding-block-start", 105, 30, 0, 1350, 767);
 		@media (max-width: toEm(1150)) {
 			gap: toRem(35);

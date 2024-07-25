@@ -89,6 +89,10 @@
 		inline-size: 90%;
 		block-size: toRem(30);
 		z-index: 40;
+		&::placeholder {
+			opacity: 0.5;
+			font-style: italic;
+		}
 		@media (max-width: toEm(767.98)) {
 			inline-size: 100%;
 		}
@@ -182,6 +186,7 @@
 
 .menu-icon {
 	margin-inline-start: toRem(20);
+	position: relative;
 	&::before,
 	&::after,
 	& span::before {
@@ -191,27 +196,28 @@
 		background-color: #1E2832;
 		position: absolute;
 		z-index: 50;
-		inset-inline-end: toRem(20);
+		inset-inline-end: 0;
 		transition: 0.3s;
 	}
 	&::before {
-		inset-block-start: toRem(20);
+		inset-block-start: toRem(0);
 	}
 	&::after {
-		inset-block-start: toRem(30);
+		inset-block-start: toRem(10);
 	}
 	& span::before {
-		inset-block-start: toRem(40);
+		inset-block-start: toRem(-10);
 	}
 	.menu-open &::after {
-		transform: rotate(45deg);
+		transform: rotate(-45deg);
+		inset-block-start: toRem(0);
 	}
 	.menu-open & span::before {
+		display: none;
 		transform: rotate(-45deg);
-		inset-block-start: toRem(30);
 	}
 	.menu-open &::before {
-		display: none;
+		transform: rotate(45deg);
 	}
 	@media (min-width: 768px) {
 		display: none;
@@ -223,11 +229,9 @@
 }
 
 .bottom-header {
-	@include adaptiveValue ("padding-block-start", 31, 15, 0, 1350, 768);
-	@include adaptiveValue ("padding-block-end", 31, 15, 0, 1350, 768);
+	@include adaptiveValue ("padding-block", 31, 10, 0, 1350, 768);
 	font-family: "Open Sans", sans-serif;
 	line-height: 1.5;
-	
 	// .bottom-header__list
 	&__list {
 		display: flex;
@@ -255,25 +259,29 @@
 		}
 	}
 	@media (max-width: toEm(767.98)) {
+		visibility: hidden;
+		opacity: 0;
 		transform: translateX(100%);
 		transition: 0.5s;
 		overflow: auto;
-		padding-block-start: toRem(50);
+		padding-block-start: toRem(30);
 		position: fixed;
+		inline-size: 100vw;
 		z-index: 30;
 		&__list {
+			font-size: toRem(20);
+			block-size: 100vh;
 			display: block;
 			text-align: center;
-			font-size: toRem(20);
 			block-size: calc(100vh - toRem(100));
 			inline-size: 100vw;
 			overflow: auto;
 			&::before {
 				content: "";
-				inline-size: 100%;
+				inline-size: 100vw;
 				block-size: 100vh;
 				display: block;
-				position: absolute;
+				position: fixed;
 				inset-block-start: 0;
 				inset-inline-start: 0;
 				background-color: rgb(244, 244, 245);
@@ -282,13 +290,14 @@
 			}
 			& li:not(:last-child){
 				margin-block-end: toRem(25);
-				
 			}
 		}
 	}
 
 	// .bottom-header .menu-icon
 	.menu-open & {
-		transform: translateX(-100%);
+		visibility: visible;
+		opacity: 1;
+		transform: translateX(0);
 	}
 }
